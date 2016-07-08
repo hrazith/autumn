@@ -1,0 +1,983 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"col",
+				"color"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"cl",
+				"class	Attr"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"te",
+				"text-transform"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"lett",
+				"letter-spacing-alt"
+			],
+			[
+				"t",
+				"text-transform"
+			],
+			[
+				"tes",
+				"text-transform"
+			],
+			[
+				"acc",
+				"accent3"
+			],
+			[
+				"con",
+				"containers"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"s",
+				"src	Attr"
+			],
+			[
+				"br",
+				"brand-grey"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"scr",
+				"script	Tag"
+			],
+			[
+				"bran",
+				"brand-primary"
+			],
+			[
+				"i",
+				"inline-block"
+			],
+			[
+				"ff",
+				"ff0000"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"c",
+				"center"
+			],
+			[
+				"o",
+				"opacity"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"m",
+				"margin-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"d4",
+				"D45449"
+			],
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"align",
+				"text-align"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"copy",
+				"copy-bold"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"wh",
+				"what-is"
+			],
+			[
+				"remove",
+				"removeClass	.removeClass()"
+			],
+			[
+				"slid",
+				"slideDown	.slideDown()"
+			],
+			[
+				"rem",
+				"removeClass	.removeClass()"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"remo",
+				"removeClass	.removeClass"
+			],
+			[
+				"padding-",
+				"padding-right"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"togg",
+				"toggleClass	.toggleClass()"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"fonst",
+				"font-size"
+			],
+			[
+				"get",
+				"getDate"
+			],
+			[
+				"sa",
+				"sans-serif"
+			],
+			[
+				"app",
+				"app-trig"
+			],
+			[
+				"border-",
+				"border-bottom"
+			],
+			[
+				"fot",
+				"font-family"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"ass",
+				"addClass"
+			],
+			[
+				"tab",
+				"table-cell"
+			],
+			[
+				"eng",
+				"engmt-id"
+			],
+			[
+				"ps",
+				"position"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"import",
+				"important"
+			],
+			[
+				"bacg",
+				"background"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"repeat",
+				"repeat-x"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"n",
+				"no-repeat"
+			],
+			[
+				"ta",
+				"table-cell"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"table-",
+				"table-row"
+			],
+			[
+				"fonts",
+				"font-size"
+			],
+			[
+				"Fon",
+				"font-weight"
+			],
+			[
+				"w",
+				"white-space"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"no",
+				"no-repeat"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "insert.php",
+			"settings":
+			{
+				"buffer_size": 805,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ds160.php",
+			"settings":
+			{
+				"buffer_size": 2951,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"last_filter": "Package Control: in",
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Sass",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/roon/Documents/_Repo/dev/autumn"
+	],
+	"file_history":
+	[
+		"/Users/roon/Documents/_Repo/dev/autumn/index.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/ds160.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/instructions.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/do.html",
+		"/Users/roon/Downloads/html5-boilerplate_v5/doc/js.md",
+		"/Users/roon/Downloads/html5-boilerplate_v5/doc/html.md",
+		"/Users/roon/Downloads/janpaepke-ScrollMagic-ae215ee/bower.json",
+		"/Users/roon/Documents/_Repo/test/oddspacing/_includes/menu.html",
+		"/Users/roon/Documents/_Repo/test/oddspacing/styles/odd.css",
+		"/Users/roon/Documents/_Repo/test/oddspacing/styles/main.css",
+		"/Users/roon/Documents/_Repo/test/oddspacing/_includes/footer.html",
+		"/Users/roon/Documents/_Repo/test/oddspacing/__1.0/index.php",
+		"/Users/roon/Documents/_Repo/test/oddspacing/login.php",
+		"/Users/roon/Downloads/login.php",
+		"/Users/roon/Desktop/etfx.svg",
+		"/Users/roon/Documents/_Repo/test/oddspacing/.htaccess",
+		"/Users/roon/Documents/_Repo/test/oddspacing/.htpasswd",
+		"/Users/roon/Documents/_Repo/test/oddspacing/styles/style.css",
+		"/Users/roon/Documents/_Repo/test/oddspacing/index.html",
+		"/Users/roon/Documents/_Repo/test/oddspacing/index2.html",
+		"/Users/roon/Downloads/janpaepke-ScrollMagic-ae215ee/examples/expert/bezier_path_animation.html",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/resources/tw/css/tw-main-phantom.css",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/resources/tw/css/css/tw-main-phantom.css",
+		"/Users/roon/Downloads/lasconic-harmonica_tablature-1beaaa8/README.md",
+		"/Users/roon/Desktop/tw-logo.svg",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/scripts/app2.js",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/styles/demo.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/styles/demo.css",
+		"/Users/roon/Desktop/cross.svg",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/styles/partials/_vars.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/styles/partials/_reset.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/scripts/app.js",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/ETF/ETF/StyleGuide/assets/sass/_vars.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/styles/_vars.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/colors.html",
+		"/Users/roon/Documents/_Repo/test/mca/nom.html",
+		"/Users/roon/Documents/_Repo/test/mca/index.html",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/sass/_vars.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/styles/demo.css.map",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/styles/scss/demo.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/TW/Global Style/styles/scss/demo.css.map",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/css/style.css.map",
+		"/Users/roon/Downloads/naked-wordpress-master/README.md",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/sass/style.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/ETF/StyleGuide/assets/css/tw-etf-tkt-style.css",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/ETF/StyleGuide/assets/sass/_mixins.scss",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/css/style.css",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/Cong/index.html",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/sass/layout/_banner.scss",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/sass/layout/_header.scss",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/sass/main.scss",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/sass/lib/_vars.scss",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/sass/layout/_nav.scss",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/images/bestica-logo-alt.svg",
+		"/Users/roon/Documents/_Repo/test/bestica/assets/images/bestica-logo.svg",
+		"/Users/roon/Documents/_Repo/test/baseline/index.html",
+		"/Users/roon/Documents/_Repo/test/bestica/styles/style.css",
+		"/Users/roon/Documents/_Repo/test/bestica/scripts/init.js",
+		"/Users/roon/Documents/_Repo/test/baseline/assets/js/main.js",
+		"/Users/roon/Dropbox/Saves/bnpp.svg",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/icons.html",
+		"/Users/roon/Documents/_Repo/test/bestica/index.html",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/system/demo/styles/demo.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/Gruntfile.js",
+		"/Users/roon/Documents/_Repo/test/oddspacing/scripts/init.js",
+		"/Users/roon/Documents/_Repo/test/oddspacing/styles/style-small.css",
+		"/Users/roon/Documents/_Repo/test/oddspacing/styles/stylee.css",
+		"/Users/roon/Documents/_Repo/test/oddspacing/styles/style-medium.css",
+		"/Users/roon/Downloads/icomoon85657/style.css",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/system/widgets/__devtools__/style-guide/style-guide.html",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/resources/tw/css/sass/tw-main-phantom.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/resources/tw/css/sass/base/_variables.scss",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/Congeries/index.html",
+		"/Users/roon/Documents/_Repo/test/material/README.md",
+		"/Users/roon/Desktop/Bestica/html5up-spectral/govt.html",
+		"/Users/roon/Desktop/Bestica/html5up-spectral/assets/css/images/arrow.svg",
+		"/Users/roon/Desktop/Bestica/html5up-spectral/assets/css/images/bestica-logo-alt.svg",
+		"/Users/roon/Desktop/Bestica/html5up-spectral/assets/sass/style.scss",
+		"/Users/roon/Documents/_Repo/test/sophix/index.html",
+		"/Users/roon/Documents/_Repo/test/sophix/contact.html",
+		"/Users/roon/Documents/_Repo/test/sophix/sass/_bootstrap-variables.scss",
+		"/Users/roon/Documents/_Repo/test/sophix/sass/_custom.scss",
+		"/Users/roon/Documents/_Repo/test/sophix/sass/bootstrap/_jumbotron.scss",
+		"/Users/roon/Documents/_Repo/test/sophix/register.html",
+		"/Users/roon/Documents/_Repo/test/sophix/mri-question-2.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/sass/_custom.scss",
+		"/Users/roon/Documents/_Repo/test/sophictec/radios.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/stylesheets/styles.css",
+		"/Users/roon/Documents/_Repo/test/sophictec/sass/responsive/_large.scss",
+		"/Users/roon/Documents/_Repo/test/sophictec/sass/responsive/_medium.scss",
+		"/Users/roon/Documents/_Repo/test/sophictec/sass/responsive/_small.scss",
+		"/Users/roon/Documents/_Repo/test/sophictec/dashboard.html",
+		"/Users/roon/Desktop/Bestica/html5up-spectral/index.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/er-question-1.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/er-question-3.2.html",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/StyleGuide/etfx-dealer-ticket-new2.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/survey-creation-temp.html",
+		"/Users/roon/Desktop/Bestica/html5up-spectral/elements.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/learn-question-6.html",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/StyleGuide/etfx-dealer-ticket-ClosingNAV.html",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/StyleGuide/images/cs.svg",
+		"/Users/roon/Documents/_Repo/test/sophictec/relapse-question-7.1.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/relapse-question-4.1.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/learn-question-7.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/er-question-4.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/mri-question-4.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/mri-question-2.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/mri-question-1.html",
+		"/Users/roon/Desktop/stuf/PSD to HTML service. You Design - We XHTML _ CSS. Convert Design to HTML online, PSD2HTML.com_files/code.css",
+		"/Users/roon/Desktop/stuf/PSD to HTML service. You Design - We XHTML _ CSS. Convert Design to HTML online, PSD2HTML.com_files/b239db8c-086f-4cbe-a8c7-47c0ef15ed08.css",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/StyleGuide/Chrome.html",
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/StyleGuide/etfx-dealer-ticket.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/sass/_bootstrap-datepicker.scss",
+		"/Users/roon/Documents/_Repo/test/sophictec/sass/_bootstrap-variables.scss",
+		"/Users/roon/Documents/_Repo/test/sophictec/sass/bootstrap/_forms.scss",
+		"/Users/roon/Desktop/_Learn/snippits/index.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/javascripts/jquery-ui.js",
+		"/Users/roon/Documents/_Repo/test/sophictec/reports-filter.html",
+		"/Users/roon/Documents/_Repo/test/sophictec/javascripts/jquery-ui-old.js",
+		"/Users/roon/Desktop/_Learn/snippits/scripts/sortable.js",
+		"/Users/roon/Documents/_Repo/test/sophictec/javascripts/sophictec.js",
+		"/Users/roon/Documents/_Repo/test/sophictec/javascripts/sortable.js",
+		"/Users/roon/Desktop/_Learn/snippits/scripts/jquery-ui.js",
+		"/Users/roon/Desktop/_Learn/snippits/scripts/arrange.js",
+		"/Users/roon/Desktop/_Learn/snippits/scripts/jquery-ui.min.js",
+		"/Users/roon/Desktop/_Learn/snippits/styles/main.css",
+		"/Users/roon/Desktop/_Learn/snippits/scripts/vendor/jquery-ui.min.js",
+		"/Users/roon/Documents/_Repo/test/sophictec/survey-creation.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/roon/Documents/_Repo/test/sophix",
+			"/Users/roon/Documents/_Repo/test/sophix/sass",
+			"/Users/roon/Documents/_Repo/test/sophix/sass/bootstrap",
+			"/Users/roon/Documents/_Repo/test/sophix/sass",
+			"/Users/roon/Documents/_Repo/test/sophictec/stylesheets",
+			"/Users/roon/Documents/_Repo/test/sophictec/sass",
+			"/Users/roon/Documents/_Repo/test/sophictec",
+			"/Users/roon/Documents/_Repo/test/oddspacing",
+			"/Users/roon/Documents/_Repo/test/-naviplan",
+			"/Users/roon/Documents/_Repo/test/-bookview/_includes",
+			"/Users/roon/Documents/_Repo/test/-client-mortgage",
+			"/Users/roon/Documents/_Repo/test/-mortgage"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"colorblock ",
+			"include",
+			"00A2CC",
+			"3%",
+			"pre",
+			"det",
+			"market",
+			">\n",
+			"caption",
+			"ux-cols",
+			"_palette",
+			"ux-p",
+			"style2",
+			"resume-bg.jpg",
+			"#r",
+			"#resume",
+			".ux-cols",
+			".ux-page ",
+			"#banner",
+			"#bann",
+			"vendor",
+			"#banner",
+			"banner",
+			".content",
+			"21b2a6",
+			"style3",
+			"style",
+			"wrapper",
+			"input",
+			"style3",
+			"special",
+			"resume",
+			".sty",
+			"bestica",
+			"style1",
+			";\n",
+			".style1",
+			"wrapper.style1",
+			"wrapper",
+			"major",
+			"a6e0db",
+			"c7ebe8",
+			"home",
+			"header",
+			"major",
+			"rounded",
+			"border-bottom",
+			"#banner",
+			"letter-spacing:",
+			"#banner",
+			"banner",
+			"h3",
+			"text-transform",
+			"logo",
+			"header",
+			"alt",
+			"banner",
+			"href",
+			"minus",
+			"newer:",
+			"\n  			,styles_resources: {\n  				 // When sass files change, recompile them\n  				 files: ['resources/tw/css/sass/**/*.scss']\n  				,tasks: ['sass:resources']",
+			"\n  				 // When sass files change, recompile them\n  				 files: ['resources/tw/css/sass/**/*.scss']\n  				,tasks: ['sass:resources']\n  			}",
+			"$tw-color-success-dark: #0c6a32;\n$tw-color-success: #119847;\n$tw-color-success-light: #16c65c;\n\n$tw-color-danger-dark: #911212;\n$tw-color-danger: #BF1718;\n$tw-color-danger-light: #E52425;\n\n$tw-color-warning-dark: #EBA800;\n$tw-color-warning: #F6BF0B;\n$tw-color-warning-light: #F8CC3C;\n\n$tw-color-submit-dark: #B25704;\n$tw-color-submit: #dc6f0b;\n$tw-color-submit-light: #dc6f0b;\n\n$tw-color-inverse-dark: #262E32;\n$tw-color-inverse: #373C3F;\n$tw-color-inverse-light: #3C494F;\n\n$tw-color-info-dark: #007A99;\n$tw-color-info: #00A3CC;\n$tw-color-info-light: #1dafec;\n\n// may delete in the future\n$tw-color-invert-dark: #262E32;\n$tw-color-invert: #373C3F;\n$tw-color-invert-light: #3C494F;",
+			"check",
+			"e61a",
+			"save",
+			"four-",
+			"four",
+			";\n",
+			"inner",
+			"landing",
+			"ul",
+			"inner",
+			"wrapper",
+			".style1",
+			".wrapper.style1",
+			"style1",
+			"h3",
+			"#inner",
+			"#banner",
+			".alt",
+			"alt",
+			"more",
+			"ed4933",
+			"style1",
+			"job-",
+			"#banner",
+			"2e3842",
+			"body",
+			"che",
+			"min-height",
+			"#sur",
+			"row",
+			"#reg-footer",
+			"reg-footer",
+			"jumbotron",
+			"jum",
+			"$brand-green",
+			"green",
+			"artifact",
+			"banner",
+			"vendor",
+			"is loading",
+			"check",
+			"margin-left: -20px;",
+			"cursor",
+			"data",
+			"Blo",
+			"togg",
+			"width: 75%",
+			"p {",
+			"width:200px;",
+			"width: 200px;",
+			"width: 200px",
+			".artifac",
+			"200px",
+			"artifact",
+			"fill=\"#",
+			"header",
+			"date",
+			"page-header",
+			"h1",
+			"page-header",
+			"36",
+			"va",
+			"dealer",
+			"inli",
+			"locate"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"2%",
+			"scripts/",
+			"0",
+			"ff7f00",
+			"../fonts/",
+			"Allurent.",
+			"ubs.php",
+			"Behance",
+			"http://www.behance.net/hrazith",
+			"mailto:hrazith@gmail.com",
+			"http://www.linkedin.com/in/harunrazith/",
+			"Wireframes.",
+			"Print.",
+			"Experiments.",
+			"allurent.html",
+			"stratus.html",
+			"ubs.html",
+			"index.html",
+			"wireframes.html",
+			"print.html",
+			"experiments.htm",
+			"Choose Clients",
+			"name=\"CorpName\" class=\"inset-shadow\"",
+			" ",
+			"<td class=\"complete\">",
+			"<td class=\"complete\"><span class=\"icon-check-alt\"></span>",
+			"<li><a href=\"site-help.html\">Site help</a></li>",
+			"<div class=\"date\"> Jun 13</div>\n                    <div class=\"msg\"><a href=\"#\">Maecenas at gravida aliquam\n                    vivamus magna non dolor.</a>\n                      <div class=\"hidden hide\">\n                        Aliquam erat volutpat. Praesent lectus lorem, lobortis in eros vel, tincidunt ullamcorper dolor. Aliquam egestas ultrices mi sit amet lacinia. Mauris tristique, neque ac rhoncus lacinia, orci mauris ultricies mauris, a sollicitudin dolor nisl ac lorem. In iaculis.\n                      </div>",
+			"<a href=\"notifications.html\">See all </a>",
+			"#827d76",
+			"#585148",
+			"585148",
+			"class=\"clientname txtlnk\"",
+			"<div class=\"actions hide\">",
+			"",
+			"module",
+			"<input type=\"radio\" name=\"engmt\">",
+			"class=\"chk\" type=\"checkbox\"",
+			"<td class=\"lables\"><label",
+			"<span class=\"icon-stats\"></span>",
+			"<span class=\"icon-plus2 tooltip\" title=\"Click to see detail\">",
+			"<span class=\"icon-refinance tooltip\" title=\"Refinance\"></span>",
+			"<span class=\"icon-purchase tooltip\" title=\"Purchase\"></span>",
+			"Underwiting: <br/>",
+			"",
+			"icon-plus2",
+			"-->",
+			"Prep for Fin. Underwrite - Bank, Client",
+			"",
+			" ",
+			"selected",
+			" ",
+			"Branch",
+			"Complex",
+			"Region",
+			"D",
+			"R",
+			"C",
+			"B",
+			"C",
+			"R",
+			"Global",
+			"",
+			"class=\"acct\"",
+			"13011",
+			"icon-x-altx-alt",
+			"send2fa-metas",
+			".topnav",
+			""
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "insert.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 805,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								805,
+								805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ds160.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2951,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1545,
+								1545
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 318.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 157.0
+	},
+	"pinned_build_system": "",
+	"project": "autumn.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
