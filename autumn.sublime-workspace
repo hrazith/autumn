@@ -384,18 +384,26 @@
 	"buffers":
 	[
 		{
-			"file": "insert.php",
-			"settings":
-			{
-				"buffer_size": 805,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "ds160.php",
 			"settings":
 			{
 				"buffer_size": 2951,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_db/create.php",
+			"settings":
+			{
+				"buffer_size": 487,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_db/table.php",
+			"settings":
+			{
+				"buffer_size": 2007,
 				"line_ending": "Unix"
 			}
 		}
@@ -457,10 +465,12 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/roon/Documents/_Repo/dev/autumn"
+		"/Users/roon/Documents/_Repo/dev/autumn",
+		"/Users/roon/Documents/_Repo/dev/autumn/_db"
 	],
 	"file_history":
 	[
+		"/Users/roon/Documents/_Repo/dev/autumn/create.php",
 		"/Users/roon/Documents/_Repo/dev/autumn/index.html",
 		"/Users/roon/Documents/_Repo/dev/autumn/ds160.php",
 		"/Users/roon/Documents/_Repo/dev/autumn/instructions.html",
@@ -587,8 +597,7 @@
 		"/Users/roon/Desktop/_Learn/snippits/scripts/arrange.js",
 		"/Users/roon/Desktop/_Learn/snippits/scripts/jquery-ui.min.js",
 		"/Users/roon/Desktop/_Learn/snippits/styles/main.css",
-		"/Users/roon/Desktop/_Learn/snippits/scripts/vendor/jquery-ui.min.js",
-		"/Users/roon/Documents/_Repo/test/sophictec/survey-creation.html"
+		"/Users/roon/Desktop/_Learn/snippits/scripts/vendor/jquery-ui.min.js"
 	],
 	"find":
 	{
@@ -832,41 +841,11 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "insert.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 805,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								805,
-								805
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "ds160.php",
 					"semi_transient": false,
 					"settings":
@@ -889,7 +868,63 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 318.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_db/create.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_db/table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								865,
+								865
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
