@@ -20,13 +20,41 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Where do you want to go</p>
-        <ul>
-            <li><a href="instructions.html">USA</a></li>
-            <li>UK</li>
-            <li>NZ</li>
-            <li>Australia</li>
-        </ul>
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "root";
+
+            $dbname = "autumn";
+
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+            $sql = "INSERT INTO CustPersonalInfo (Last_Name)
+            VALUES ('$_POST[lastname]')";
+
+            if ($conn->query($sql) === TRUE) {
+                $last_id = $conn->insert_id;
+                echo "New record created successfully. Last inserted ID is: " . $last_id;
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+
+            $conn->close(); 
+        ?>
+
+
+        <h1>DS160 | Personal 2</h1>
+ 
+        
+        
+
+    
+
+
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

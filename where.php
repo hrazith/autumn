@@ -20,12 +20,38 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>What do you want to do</p>
+        <p>Where do you want to go</p>
         <ul>
-            <li><a href="where.html">Vist</a></li>
-            <li>Study</li>
-            <li>Work</li>
-            <li>Do business</li>
+
+
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "root";
+            $dbname = "autumn";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            } 
+
+            // Selct database
+            $sql = "SELECT CountryName FROM CountryList";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<li> " ."<a href='instructions.html'>". $row["CountryName"]."</a>"."</li>";
+                }
+            } else {
+                echo "0 results";
+            }
+
+            $conn->close();
+        ?>
         </ul>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

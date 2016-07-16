@@ -20,17 +20,40 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1>DS160</h1>
+        <h1>DS160 | Personal 1</h1>
  
-        <form action="insert.php" method="post">
+        <form action="personal2.php" method="post">
+            <p>
+                <label for="lastname">Sur Name:</label>
+                <input type="text" name="lastname" id="lastName">
+            </p>
             <p>
                 <label for="firstName">Given Name:</label>
                 <input type="text" name="firstname" id="firstName">
             </p>
             <p>
-                <label for="lastName">Sur Name:</label>
-                <input type="text" name="lastname" id="lastName">
+                <label for="nativeName">Full name in Native Alphabel:</label>
+                <input type="text" name="nativename" id="nativeName">
+                <input type="checkbox" name="na" id="nativeNamena"> <label for="na">Does not apply</label>
             </p>
+
+            <p>
+                <label for="othernames">Have you used other names:</label>
+                
+                  <input type="radio" name="othernames" value="yes"> Yes
+                  <input type="radio" name="othernames" value="no"> No
+               
+
+            </p>
+            <p>
+                <label for="telecode">Telecode name?</label>
+                
+                  <input type="radio" name="telecode" value="yes"> Yes
+                  <input type="radio" name="telecode" value="no"> No
+               
+
+            </p>
+            
             <p>
                 <label for="sex">Gender:</label>
                 
@@ -47,9 +70,15 @@
                 <label for="dob">Date of Birth:</label>
                 <input type="text" name="birthdate" id="dob">
             </p>
+
+            <h4>Place of Birth</h4>
             <p>
-                <label for="pod">Place of Birth:</label>
-                <input type="text" name="birthplace" id="pob">
+                <label for="bcity">City:</label>
+                <input type="text" name="bcity" id="bCity">
+                <label for="bstate">State:</label>
+                <input type="text" name="bstate" id="bState">
+                <label for="bcountry">Country:</label>
+                <input type="text" name="bcountry" id="bCountry">
             </p>
             <input type="submit" value="Submit">
         </form>
