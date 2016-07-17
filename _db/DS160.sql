@@ -23,7 +23,9 @@ CREATE TABLE CustProfileInfo
   FirstName VARCHAR(200) NOT NULL,
   LastName VARCHAR(200) NOT NULL,
   EmailAddress VARCHAR(500) NOT NULL,
-  Password VARCHAR(500) NOT NULL
+  Password VARCHAR(500) NOT NULL,
+  DateOfBirth VARCHAR(100) NOT NULL
+
   )
 
 
@@ -228,4 +230,6 @@ CREATE TABLE CustAppInfo
   Foreign key (CustAppInfoId) references CustAppInfo(CustAppInfoId)
  )
  
+ $sql = "INSERT INTO CustProfileInfo (UserName, FirstName, LastName, EmailAddress, Password, DateOfBirth)
+            VALUES ('$_POST[username]','$_POST[firstname]','$_POST[lastname]','$_POST[email]','$_POST[pass]'),'$_POST[dob]'";
  

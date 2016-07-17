@@ -20,26 +20,42 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <ul>
-            <li><a href="signup.php">Sign Up</a></li>
-            <li><a href="login.php">Log In</a></li>
-        </ul>
+        <h1>Sign up</h1>
+        <form action="signin.php" method="post">
+            <p>
+                <label for="username">User Name:</label>
+                <input type="text" name="username" id="userName">
+            </p>
+            <p>
+                <label for="firstname">First Name:</label>
+                <input type="text" name="firstname" id="firstName">
+            </p>
+            <p>
+                <label for="lastname">Last Name:</label>
+                <input type="text" name="lastname" id="lastName">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="pass">
+            </p>
+            <p>
+                <label for="dob">Date of Birth:</label>
+                <input type="text" name="dob" id="dob">
+            </p>
 
-        <p>Hello, Welcome to AUTUMN. Choose the language you want to continue.</p>
+            <p> By signing up, I agree to Autumn’s Terms of Service, Payments Terms of Service, Privacy Policy, Refund Policy, and Customer Guarantee Terms.</p>
+            
+            
+            <input type="submit" value="Submit">
+        </form>
+        
 
-        <ul>
-            <li>English</li>
-            <li>Tamil</li>
-            <li>Kannada</li>
-        </ul>
-
-        <p>What do you want to do</p>
-        <ul>
-            <li><a href="where.php">Vist</a></li>
-            <li>Study</li>
-            <li>Work</li>
-            <li>Do business</li>
-        </ul>
+        
+       
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

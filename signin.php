@@ -20,26 +20,51 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <ul>
-            <li><a href="signup.php">Sign Up</a></li>
-            <li><a href="login.php">Log In</a></li>
-        </ul>
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "root";
 
-        <p>Hello, Welcome to AUTUMN. Choose the language you want to continue.</p>
+            $dbname = "autumn";
 
-        <ul>
-            <li>English</li>
-            <li>Tamil</li>
-            <li>Kannada</li>
-        </ul>
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+            $sql = "INSERT INTO CustProfileInfo (UserName, FirstName, LastName, EmailAddress, Password, DateOfBirth)
+            VALUES ('$_POST[username]','$_POST[firstname]','$_POST[lastname]','$_POST[email]','$_POST[password]','$_POST[dob]')";
+ 
 
-        <p>What do you want to do</p>
-        <ul>
-            <li><a href="where.php">Vist</a></li>
-            <li>Study</li>
-            <li>Work</li>
-            <li>Do business</li>
-        </ul>
+            if ($conn->query($sql) === TRUE) {
+                echo "You have signed successfully." 
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+
+            $conn->close(); 
+        ?>
+
+        <h1>Sign In</h1>
+        <form action="loggedin.php" method="post">
+            
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="pass">
+            </p>
+            
+            
+            <input type="submit" value="Submit">
+        </form>
+        
+
+        
+       
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

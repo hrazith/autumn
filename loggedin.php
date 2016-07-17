@@ -19,27 +19,45 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <ul>
-            <li><a href="signup.php">Sign Up</a></li>
-            <li><a href="login.php">Log In</a></li>
-        </ul>
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "root";
 
-        <p>Hello, Welcome to AUTUMN. Choose the language you want to continue.</p>
+            $dbname = "autumn";
 
-        <ul>
-            <li>English</li>
-            <li>Tamil</li>
-            <li>Kannada</li>
-        </ul>
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+            
 
-        <p>What do you want to do</p>
-        <ul>
-            <li><a href="where.php">Vist</a></li>
-            <li>Study</li>
-            <li>Work</li>
-            <li>Do business</li>
-        </ul>
+            $user = $_POST['email'];
+            $pass = $_POST['password'];
+
+        
+
+            $sql = "SELECT * FROM CustProfileInfo WHERE EmailAddress='$user' and password='$pass'";
+            $numrows = mysqli_num_rows($sql);
+
+            // If result matched $username and $password, table row must be 1 row
+            if ($numrows==1) {
+                echo "Success! $count";
+            } else {
+                echo "Unsuccessful! $count";
+            }
+            
+
+            $conn->close(); 
+        ?>
+
+        
+        
+
+        
+       
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
