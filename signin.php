@@ -20,31 +20,36 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        
+
+
         <?php
             $servername = "localhost";
             $username = "root";
             $password = "root";
-
             $dbname = "autumn";
 
             // Create connection
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            $conn = new mysqli($servername, $username, $password, $dbname);
             // Check connection
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
-            $sql = "INSERT INTO CustProfileInfo (UserName, FirstName, LastName, EmailAddress, Password, DateOfBirth)
-            VALUES ('$_POST[username]','$_POST[firstname]','$_POST[lastname]','$_POST[email]','$_POST[password]','$_POST[dob]')";
- 
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            } 
+
+            // Selct database
+            $sql = "INSERT INTO CustProfileInfo (UserName, FirstName, LastName, EmailAddress, Password, DateOfBirth )
+            VALUES ('$_POST[username]', '$_POST[firstname]', '$_POST[lastname]', '$_POST[email]', '$_POST[password]', '$_POST[dob]' )";
 
             if ($conn->query($sql) === TRUE) {
-                echo "You have signed successfully." 
+                echo "New record created successfully";
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
 
-            $conn->close(); 
+
+            $conn->close();
         ?>
+        
 
         <h1>Sign In</h1>
         <form action="loggedin.php" method="post">
