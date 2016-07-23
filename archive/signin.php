@@ -19,45 +19,54 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- Add your site or application content here -->
+        
+
+
         <?php
             $servername = "localhost";
             $username = "root";
             $password = "root";
-
             $dbname = "autumn";
 
             // Create connection
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            $conn = new mysqli($servername, $username, $password, $dbname);
             // Check connection
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
-            
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            } 
 
-            $user = $_POST['email'];
-            $pass = $_POST['password'];
+            // Selct database
+            $sql = "INSERT INTO CustProfileInfo (UserName, FirstName, LastName, EmailAddress, Password, DateOfBirth )
+            VALUES ('$_POST[username]', '$_POST[firstname]', '$_POST[lastname]', '$_POST[email]', '$_POST[password]', '$_POST[dob]' )";
 
-        
-
-            $sql = "SELECT * FROM CustProfileInfo WHERE EmailAddress='$user' and password='$pass'";
-            $numrows = mysqli_num_rows($sql);
-
-            // If result matched $username and $password, table row must be 1 row
-            if ($numrows==1) {
-                echo "Success! $count";
+            if ($conn->query($sql) === TRUE) {
+                echo "New record created successfully";
             } else {
-                echo "Unsuccessful! $count";
+                echo "Error: " . $sql . "<br>" . $conn->error;
             }
-            
 
-            $conn->close(); 
+
+            $conn->close();
         ?>
-
-        
         
 
+        <h1>Sign In</h1>
+        <form action="loggedin.php" method="post">
+            
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="pass">
+            </p>
+
+            <input type="submit" value="Submit">
+        </form>
         
-       
+
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

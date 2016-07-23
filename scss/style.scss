@@ -1,0 +1,117 @@
+$font-stack:    Roboto, sans-serif;
+$secondary-color: #D9D9D9;
+$brand-color: #664628;
+.test { border: 1px dotted red}
+
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+body { font: 100% $font-stack; }
+
+a { text-decoration: none; }
+
+
+
+.topbar {
+	height: 50px;
+	border-bottom: 4px solid $secondary-color;
+
+	.left{
+		margin: 10px 0 0 14px;
+		background: url('../img/autumn-logo.svg') no-repeat top left;
+		background-size: 17px 24px;
+	}
+
+	a, a:visited, a:active {
+		color: $brand-color;
+	}
+
+	.brand {
+		
+		padding-left: 28px;
+		font-weight: 400;
+		font-size: 1.2em;
+		height: 28px
+	}
+
+	.logo {
+		height: 24px;
+	}
+
+	ul li {
+		display: inline;
+	}
+	.right, .lang{
+		float: right;
+	}
+	.left, .login {
+		float: left;
+	}
+	.right {
+		margin-right: 20px;
+		width: 400px;
+		padding-top: 12px;
+	}
+}
+
+
+
+h1.welcome {
+	font-weight: 900;
+	font-size: 2.4em;
+	color: $brand-color;
+	padding: 30px 0 12px 0;
+}
+
+.intro, .welcome { 	text-align: center;	}
+
+.intro {
+	font-size: 1.4em;
+	padding-bottom: 40px;
+}
+
+.container {
+	margin: 12px auto;
+	width: 98%;
+}
+
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+  float: left;
+  background: $secondary-color;
+}
+
+.col-1-4 {
+  width: 23% ;
+  height: 220px;
+}
+
+[class*='col-'] {
+	border-right: 20px solid #fff;
+}
+[class*='col-']:last-of-type {
+  border-right: 0;
+}
+
+.doOpt:hover {
+	cursor: pointer;
+}
+
+.doOpt a {
+	padding: 20px 0 0 20px;
+	font-size: 18px;
+}
+
+
+
+

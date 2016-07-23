@@ -18,28 +18,54 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "root";
+            $dbname = "autumn";
 
-        <!-- Add your site or application content here -->
-        <ul>
-            <li><a href="signup.php">Sign Up</a></li>
-            <li><a href="login.php">Log In</a></li>
-        </ul>
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            } 
+            
 
-        <p>Hello, Welcome to AUTUMN. Choose the language you want to continue.</p>
+            $user = $_POST['email'];
+            $pass = $_POST['password'];
+            
 
-        <ul>
-            <li>English</li>
-            <li>Tamil</li>
-            <li>Kannada</li>
-        </ul>
+        
+            $sql = "SELECT * FROM CustProfileInfo WHERE EmailAddress='$user' and password='$pass'";
 
-        <p>What do you want to do</p>
-        <ul>
-            <li><a href="where.php">Vist</a></li>
-            <li>Study</li>
-            <li>Work</li>
-            <li>Do business</li>
-        </ul>
+            if ($result = $conn->query($sql)) {
+
+                /* determine number of rows result set */
+                $row_cnt = $result->num_rows;
+                printf("Result set has %d rows.\n", $row_cnt);
+                    if ($row_cnt=1) {
+                        header("Location: members.php");
+                         
+                    }
+               
+
+
+                /* close result set */
+                $result->close();
+            }
+
+
+            
+
+            $conn->close(); 
+        ?>
+
+        
+        
+
+        
+       
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
