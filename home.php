@@ -1,3 +1,16 @@
+<?php
+	error_reporting(E_ALL & ~E_NOTICE);
+	session_start();
+
+	if (isset($_SESSION['id'])) {
+		$userId = $_SESSION['id'];
+		$email = $_SESSION['email'];
+	} else {
+		header('Location: index.php');
+		die();
+	}
+
+?>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
@@ -7,11 +20,14 @@
 		<header> 
 			<div class="logo"> Autumn</div>
 			<div class="global-nav">
+				<form method ="post" action="logout.php">
 				<ul>
 					<li class="date"> June 13, 2015</li>
+					<li class="date"> <?php echo $email; ?></li>
 					<li> <a><i class="icon-settings"></i>Settings</a></li>
-					<li> <a><i class="icon-contact"></i>Contact</a> </li>
-				<ul>
+					<li> <input type="submit" name="submit" class="primary rounded" value="Log Out"/></li>
+				</ul>
+				</form>
 			</div>
 		</header>
 		<div class="hero test">	
@@ -23,26 +39,26 @@
 					<a href="nom.html">
 						<div class="silo rounded">
 							<i class="icon-nominations"></i>
-							<h2>Nominations</h2>
+							<h2>Visit</h2>
 						</div>
 					</a>
 				</div>
 				<div class="col-1-4">
 					<div class="silo rounded">
 						<i class="icon-contracts"></i>
-						<h2>Contracts</h2>
+						<h2>Work</h2>
 					</div>
 				</div>
 				<div class="col-1-4">
 					<div class="silo rounded">
 						<i class="icon-volume"></i>
-						<h2>Volume Tracking</h2>
+						<h2>Study</h2>
 					</div>
 				</div>
 				<div class="col-1-4">
 					<div class="silo rounded">
 						<i class="icon-tickets"></i>
-						<h2>Tickets</h2>
+						<h2>Join family</h2>
 					</div>
 				</div>
 			</div>
@@ -50,19 +66,19 @@
 				<div class="col-1-4">
 					<div class="silo rounded">
 						<i class="icon-statements"></i>
-						<h2>Shipper Statements</h2>
+						<h2>Start Business</h2>
 					</div>
 				</div>
 				<div class="col-1-4">
 					<div class="silo rounded">
 						<i class="icon-invoices"></i>
-						<h2>Invoices</h2>
+						<h2>Invest</h2>
 					</div>
 				</div>
 				<div class="col-1-4">
 					<div class="silo rounded">
 						<i class="icon-letter"></i>
-						<h2>Carrier Letter</h2>
+						<h2>Live permanently</h2>
 					</div>
 				</div>
 				<div class="col-1-4">
