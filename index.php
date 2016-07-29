@@ -22,7 +22,7 @@
 	    if ($email == $dbEmail && $password == $dbPassword) {
 	    	$_SESSION['email'] = $email;
 	    	$_SESSION['id'] = $userId;
-	    	header('Location:home.php');
+	    	header('Location: home.php');
 	    } else { 
 			/*$err= "Incorrect email or password";*/
 			$err = '<i class="icon-arrow-up"></i>'.'Incorrect email or password';
@@ -37,7 +37,7 @@
 	</head>
 	<body>
 		<div class="content">
-			<div class="login shadow">
+			<div class="inputbox signin shadow">
 				<h2>Autumn</h2>
 				<form method ="post" action="index.php">
 					<ul class="input-list">
@@ -49,7 +49,7 @@
 						<input type="submit" name="submit" class="primary rounded" value="Log In"/>
 						<div class="links"> 
 							<ul>
-								<li><a>Sign up</a></li>
+								<li><a href="signup.php">Sign up</a></li>
 								<li><a>Forgot Pass?</a></li>
 							</ul>
 						</div>

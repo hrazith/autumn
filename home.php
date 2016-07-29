@@ -9,8 +9,8 @@
 		header('Location: index.php');
 		die();
 	}
-
 ?>
+
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
@@ -25,7 +25,7 @@
 					<li class="date"> June 13, 2015</li>
 					<li class="date"> <?php echo $email; ?></li>
 					<li> <a><i class="icon-settings"></i>Settings</a></li>
-					<li> <input type="submit" name="submit" class="primary rounded" value="Log Out"/></li>
+					<li> <input type="submit" name="submit" class="naked" value="Log Out"/></li>
 				</ul>
 				</form>
 			</div>
@@ -36,7 +36,7 @@
 		<div class="content">
 			<div class="grid major-silos">
 				<div class="col-1-4">
-					<a href="nom.html">
+					<a href="where.php">
 						<div class="silo rounded">
 							<i class="icon-nominations"></i>
 							<h2>Visit</h2>

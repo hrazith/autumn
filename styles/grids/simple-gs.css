@@ -13,6 +13,7 @@ http://css-tricks.com/dont-overthink-it-grids/
 .col-1-2 { width: 50%; }
 .col-1-4 { width: 25%; }
 .col-1-8 { width: 12.5%; }
+.col-1-1 { width: 100%; }
 
 .grid:after {
   content: "";
@@ -20,11 +21,10 @@ http://css-tricks.com/dont-overthink-it-grids/
   clear: both;
 }
 
-
 [class*='col-'] {
   padding-right: 30px;
 }
 
-[class*='col-']:last-of-type {
+[class*='col-']:last-of-type, .col-1-1 {
   padding-right: 0;
 }

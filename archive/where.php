@@ -37,7 +37,7 @@
                 die("Connection failed: " . $conn->connect_error);
             } 
 
-            // Selct database
+            // Selcet database
             $sql = "SELECT CountryName FROM CountryList";
             $result = $conn->query($sql);
 

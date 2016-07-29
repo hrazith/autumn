@@ -53,9 +53,9 @@ input[type="text"], input[type="password"] {
   -ms-border-radius: none;
   -o-border-radius: none;
   border-radius: none;
-
   border: 1px solid #c4c4c4;
 }
+
 input[type="text"]:focus {
   outline: none;
 }
@@ -88,7 +88,69 @@ input[type="text"]:focus {
    font-size: 14px; 
 }
 
+input.naked {
+  background: none;
+  color: #fff;
+}
 
-/* Chk Boxes */
+input.naked:hover {
+  cursor: pointer;
+  color: #FDBD62;
+}
+
+
+/* Dropdowns, Select */
+
+
+
+.select {
+  border: 1px solid #c4c4c4;
+  position: relative;
+  background: #fff;
+  display: inline-block;
+}
+
+.select select {
+    padding:12px 12px;
+    font-size: 16px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+}
+
+.select:before {
+    bottom: 1px;
+    color: #757575;
+    content: "▼";
+    line-height: 1;
+    padding-top: 0.7em;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transform: scale(0.84, 0.42);
+    width: 2em;
+}
+
+
+/** Progress Bar */
+#progress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+}
+
+#bar {
+  position: absolute;
+  width: 12%;
+  height: 100%;
+  background-color: #4CAF50;
+}
+
 
 
