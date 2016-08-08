@@ -1,8 +1,20 @@
 <?php
+	error_reporting(E_ALL & ~E_NOTICE);
+	session_start();
+
+	if (isset($_SESSION['id'])) {
+		$userId = $_SESSION['id'];
+		$email = $_SESSION['email'];
+	} else {
+		header('Location: index.php');
+		die();
+	}
+
     include_once("connect.php");
 	$sql = "SELECT CountryName FROM CountryList";
-	$result = $dbCon->query($sql);
+	$result = $dbCon->query($sql);	
 ?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
@@ -26,68 +38,76 @@
 			&nbsp;
 		</div>
 		<div class="content">
+
+			
 			<div class="grid major-silos">
 				<div class="col-1-1">
-					<div class="discovery rounded">
-						<h2>Visit</h2>
-						<div class="destination">
-							<div class="select">
-								<select name="countries" onchange="showContext(this.value)">
-									<option>Where do you want to go?</option>
-									<?php
-							  			if ($result->num_rows > 0) {
-							                // output data of each row
-							                while($row = $result->fetch_assoc()) {
-							                    echo "<option>". $row["CountryName"]."</option>";
-							                }
-							            } else {
-							                echo "0 results";
-							            } 
-							  		?>
-							  	</select>
-						  	</div>
-						  	<p>&nbsp;</p>
-						  	<img src="images/world_map.svg" width="100%">
+					<div class="destination-selector">
+						<div class="select">
+							<select name="countries" onchange="showContext(this.value)">
+								<option>Where do you want to go?</option>
+								<?php
+						  			if ($result->num_rows > 0) {
+						                // output data of each row
+						                while($row = $result->fetch_assoc()) {
+						                    echo "<option>". $row["CountryName"]."</option>";
+						                }
+						            } else {
+						                echo "0 results";
+						            } 
+						  		?>
+						  	</select>
 						</div>
 					</div>
-				</div>
-				<div id="instructions">
-					<p>Bitcchin text here!</p>
+					<div id="instructions">
+						<div class="discovery rounded">
+							<div class="stat-overlay">
+								<h3>28</h3>
+								<p>visa-free countries. See if you have more, answer a <a href="#">few simple questions</a> </p>
+							</div>
+							<div class="destination">
+							  	<img src="images/world_map.svg" width="100%">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			
 		</div>
+		
+
 		<script type="text/javascript">
 			function showContext(context) {
 
-				var words, acronym, nextWord;
-				words = context.split(' ');
-				acronym= "";
-				index = 0
-    
-			    while (index<words.length) {
-			    nextWord = words[index];
-			    acronym = acronym + nextWord.charAt(0);
-			    index = index + 1 ;
-			    }
+			var words, acronym, nextWord;
+			words = context.split(' ');
+			acronym = "";
+			index = 0
 
-			    acronym = acronym.toLowerCase() + "a.html"
+			while (index < words.length) {
+				nextWord = words[index];
+				acronym = acronym + nextWord.charAt(0);
+				index = index + 1;
+			}
 
-				var xhttp;
-				if (context == "") {
-					document.getElementById("instructions").innerHTML = "";
-					return;
+			acronym = acronym.toLowerCase() + ".php"
+
+			var xhttp;
+			if (context == "") {
+				document.getElementById("instructions").innerHTML = "";
+				return;
+			}
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					document.getElementById("instructions").innerHTML = xhttp.responseText;
 				}
-				xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function() {
-					if (xhttp.readyState == 4 && xhttp.status == 200) {
-						document.getElementById("instructions").innerHTML = xhttp.responseText;
-					}
-				};
-				xhttp.open("GET", acronym, true);
-				xhttp.send();
+			};
+			xhttp.open("GET", acronym, true);
+			xhttp.send();
 
-				alert(acronym);
+			//alert(acronym);
+
 			}
 		</script>
 		
@@ -95,4 +115,5 @@
 
 </html>
 
-<?php $conn->close(); ?>
+<?php mysqli_close($dbCon); ?>
+

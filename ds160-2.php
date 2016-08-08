@@ -1,17 +1,26 @@
 <?php
-    include_once("connect.php");
-    // Check connection
-    $sql = "INSERT INTO CustPersonalInfo (Sex, Marital_Status)
-    VALUES ('$_POST[gender]', '$_POST[mstatus]' )";
-	$newentry = mysqli_query($dbCon, $sql);
-	$insert = mysqli_query($dbCon, $newentry);
+	error_reporting(E_ALL & ~E_NOTICE);
+	session_start();
 
+	if (isset($_SESSION['id'])) {
+		$appId = $_SESSION['appId'];
+		echo $appId;
+	} else {
+		header('Location: index.php');
+		die();
+	}
 
-    if($insert){
-		echo "<p>Success!</p>";
-			} else {
-		            echo "<p>Sorry, your registration failed. Please go back and try again.</p>";  
-		        }   
+    include_once("connect.php");   
+
+    $sql = "INSERT INTO CustPersonalInfo (CustAppInfoId, Sex, Marital_Status)
+    VALUES ('$appId', '$_POST[gender]', '$_POST[mstatus]' )";
+	if (mysqli_query($dbCon, $sql)) {
+		echo "success";
+	} else {
+	    echo "Error: " . $sql . "<br>" . mysqli_error($dbCon);
+	}
+
+	mysqli_close($dbCon);  
 
 ?>
 
@@ -34,20 +43,11 @@
 					<div class="grid">
 						<div class="col-1-2">
 							<h2>Gender</h2>
-							<ul class="input-list gender">
-								<li><input type="radio" name="gender" value="male"> Male</li>
-								<li><input type="radio" name="gender" value="female"> Female</li>
-							</ul>
+							
 						</div>
 						<div class="col-1-2">
 							<h2>Marital Status</h2>
-							<ul class="input-list msatus">
-								<li><input type="radio" name="mstatus" value="married"> Married</li>
-								<li><input type="radio" name="mstatus" value="single"> Single</li>
-								<li><input type="radio" name="mstatus" value="single"> Divorced</li>
-								<li><input type="radio" name="mstatus" value="single"> Widowed</li>
-								<li><input type="radio" name="mstatus" value="single"> Legally seperated</li>
-							</ul>
+							
 						</div>
 					</div>
 					<?php echo $err; ?>

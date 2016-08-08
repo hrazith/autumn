@@ -174,10 +174,11 @@ header {
 	height: 104px;
 	top: 0;
 	left: 0;
-	background: url('../images/low-poly-texture.png') no-repeat 0 -264 ;
+	background-image: url('../images/low-poly-texture.png');
 	display: table;
 	z-index: 2;
 }
+
 
 .content {
 	width: 978px;
@@ -189,6 +190,13 @@ header {
 h1 {
 	font-weight: 800;
 	font-size: 58px;
+}
+
+h2.title { 
+	color: var(--brand-color);
+	font-size: 22px;
+	font-weight: 600;
+	display: inline-block;
 }
 
 body {
@@ -249,13 +257,6 @@ h2 {
 	height: 480px;
 }
 
-.discovery h2{ 
-	color: var(--main-color);
-	margin: 16px 0 0 30px;
-	font-size: 32px;
-	font-weight: 800;
-}
-
 .destination {
 	width: 642px;
 	position: absolute;
@@ -263,8 +264,29 @@ h2 {
 	right: 0;
 }	
 
-.destination .select {
-	width: calc(100% - 30px);
+.destination-selector{
+	margin-bottom: 30px;
+	height: 50px;
+}
+
+.destination-selector .select {
+	width: 100%;
+}
+
+.stat-overlay {
+	width: 200px;
+}
+
+.stat-overlay h3 {
+	font-weight: 700;
+	font-size: 68px;
+	color: var(--brand-color);
+}
+
+.stat-overlay a {
+	color: #D45449;
+	border-bottom: 1px dotted #D45449; 
+	padding-bottom: 2px;
 }
 
 /* Nominations */
