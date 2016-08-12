@@ -4,6 +4,7 @@
 	@import 'elements/icons.css';
 	@import 'elements/form.css';
 	@import 'elements/vars.css';
+	@import 'plugins/typeahead.css';
 
 /* Global Stuff */
 

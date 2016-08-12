@@ -1,3 +1,4 @@
+
 <?php
 	session_start();
 	include_once("connect.php");
@@ -7,27 +8,28 @@
 	$_SESSION['countryid'] = $row[0];
 	$_SESSION['visatype'] = "B-2"; // hardcoded :(
 	$_SESSION['visaid'] = $roww[0];
+	$appnumber = "APP"."00".$_SESSION['id'].$_SESSION['countryid'].$_SESSION['visatype'];
 
 ?>
-
 <div class="discovery rounded">
 	<div class="stat-overlay">
-		<h3>United</h3>
+		<h3>USA</h3>
 		<h2>Step 1 </h2>
-		<p>Fill up DS-160</p>
-		<form method ="post" action="ds160-1.php">
-			<div class="actions">
+		<p>
+			Fill up DS-160<br/>
+			This really easy
+		</p>
+
+			<div class="actions btn">
 				<input type="submit" name="submit" class="primary rounded" value="Start DS-160"/>
 			</div>
-		</form>
+
 	</div>
 	<div class="destination">
-		<img src="images/autumn-logo.svg" width="40%">
+		<img src="images/us.svg" width="60%">
 	</div>
-	<?php 
-		echo "Favorite country is " . $_SESSION["countryid"] . ".<br/>";
-		echo "Favorite visa type is " . $_SESSION["visatype"] . ".<br/>";
-		echo "Favorite visa Id is " . $_SESSION["visaid"] . ".<br/>";
-		mysqli_close($dbCon);
-	?>
+	
 </div>
+
+
+

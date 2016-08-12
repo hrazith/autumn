@@ -4,8 +4,60 @@
 		"selected_items":
 		[
 			[
+				"Country",
+				"CountryList"
+			],
+			[
+				"data",
+				"data-code"
+			],
+			[
+				"ma",
+				"margin-right"
+			],
+			[
 				"mar",
-				"margin-top"
+				"margin-bottom"
+			],
+			[
+				"C",
+				"CountryCode"
+			],
+			[
+				"Count",
+				"CountryList"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"size",
+				"sizeof"
+			],
+			[
+				"mys",
+				"mysql_query"
+			],
+			[
+				"sess",
+				"session_destroy"
 			],
 			[
 				"font",
@@ -20,20 +72,12 @@
 				"color"
 			],
 			[
-				"b",
-				"background"
-			],
-			[
 				"margin",
 				"margin-top"
 			],
 			[
 				"back",
 				"background"
-			],
-			[
-				"fon",
-				"font-weight"
 			],
 			[
 				"padding",
@@ -54,10 +98,6 @@
 			[
 				"marg",
 				"margin"
-			],
-			[
-				"fo",
-				"font-size"
 			],
 			[
 				"te",
@@ -90,14 +130,6 @@
 			[
 				"li",
 				"line-height"
-			],
-			[
-				"p",
-				"padding"
-			],
-			[
-				"ma",
-				"margin-bottom"
 			],
 			[
 				"ba",
@@ -300,10 +332,6 @@
 				"position"
 			],
 			[
-				"op",
-				"opacity"
-			],
-			[
 				"fun",
 				"function"
 			],
@@ -383,46 +411,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 3298,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scss/style.scss",
-			"settings":
-			{
-				"buffer_size": 859,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/style.css",
-			"settings":
-			{
-				"buffer_size": 927,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/main.css",
-			"settings":
-			{
-				"buffer_size": 5907,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/style.css.map",
-			"settings":
-			{
-				"buffer_size": 765,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -431,10 +419,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 107.0,
-		"last_filter": "Package Control: in",
+		"height": 207.0,
+		"last_filter": "Package Control: st",
 		"selected_items":
 		[
+			[
+				"Package Control: st",
+				"Package Control: Add Repository"
+			],
 			[
 				"Package Control: in",
 				"Package Control: Install Package"
@@ -481,20 +473,69 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/roon/Documents/_Repo/dev/autumn",
-		"/Users/roon/Documents/_Repo/dev/autumn/img",
-		"/Users/roon/Documents/_Repo/dev/autumn/scss"
+		"/Users/roon/Documents/_Repo/dev/autumn"
 	],
 	"file_history":
 	[
-		"/Users/roon/Documents/_Repo/dev/autumn/css/reset.css",
+		"/Users/roon/Documents/_Repo/dev/autumn/where.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/styles/plugins/typeahead.css",
+		"/Users/roon/Documents/_Repo/dev/autumn/test.php",
+		"/Users/roon/Downloads/jquery-typeahead-2.6.1/example/demo-country_v2-temp.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/ustest.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/us.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/images/world_map.svg",
+		"/Users/roon/Documents/_Repo/dev/autumn/test.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/scripts/main.js",
+		"/Users/roon/Documents/_Repo/dev/mca/nom.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/archive/v1/where.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/archive/v1/js/main.js",
+		"/Users/roon/Documents/_Repo/dev/autumn/where-test.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/styles/main.css",
+		"/Users/roon/Documents/_Repo/dev/autumn/ds160-2.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/gethint.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/index.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/home.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/scripts/acrynom.js",
+		"/Users/roon/Documents/_Repo/dev/autumn/usa.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/session1.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/session2.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/sessionx.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/hm.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/logout.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/archive/_db/insert-countries.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/research/List of all codes.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/research/countries-codes.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/ds160-1.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/archive/_db/insert-countrycode.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/research/countries-ds160.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/scripts/transitions.js",
+		"/Users/roon/Documents/_Repo/dev/autumn/scripts/behaviors.js",
+		"/Users/roon/Documents/_Repo/dev/autumn/styles/grids/simple-gs.css",
+		"/Users/roon/Documents/_Repo/dev/autumn/research/List of all countries-array.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/research/List of all countries.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/autumn.sublime-project",
+		"/Users/roon/Documents/_Repo/dev/autumn/connect.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/styles/elements/form.css",
+		"/Users/roon/Documents/_Repo/dev/autumn/sandbox.html",
+		"/Users/roon/Documents/_Repo/dev/autumn/translations/example-fr.json",
+		"/Users/roon/Documents/_Repo/dev/autumn/archive/where.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/signup.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/images/autumn-logo.svg",
+		"/Users/roon/Documents/_Repo/dev/autumn/styles/elements/icons.css",
+		"/Users/roon/Documents/_Repo/dev/autumn/user.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/index2.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/archive/robots.txt",
+		"/Users/roon/Documents/_Repo/dev/autumn/archive/loggedin.php",
+		"/Users/roon/Documents/_Repo/dev/autumn/img/autumn-logo.svg",
 		"/Users/roon/Documents/_Repo/dev/autumn/css/main.css",
 		"/Users/roon/Documents/_Repo/dev/autumn/css/style.css",
+		"/Users/roon/Documents/_Repo/dev/autumn/js/main.js",
+		"/Users/roon/Documents/_Repo/dev/autumn/index.html",
 		"/Users/roon/Documents/_Repo/dev/autumn/scss/style.scss",
+		"/Users/roon/Documents/_Repo/dev/autumn/css/reset.css",
 		"/Users/roon/Documents/_Repo/dev/autumn/ds160.php",
 		"/Users/roon/Documents/_Repo/dev/autumn/_db/table.php",
 		"/Users/roon/Documents/_Repo/dev/autumn/create.php",
-		"/Users/roon/Documents/_Repo/dev/autumn/index.html",
 		"/Users/roon/Documents/_Repo/dev/autumn/instructions.html",
 		"/Users/roon/Documents/_Repo/dev/autumn/do.html",
 		"/Users/roon/Downloads/html5-boilerplate_v5/doc/js.md",
@@ -563,62 +604,11 @@
 		"/Users/roon/Documents/_Repo/test/oddspacing/styles/style-medium.css",
 		"/Users/roon/Downloads/icomoon85657/style.css",
 		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/system/widgets/__devtools__/style-guide/style-guide.html",
-		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/resources/tw/css/sass/tw-main-phantom.scss",
-		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/resources/tw/css/sass/base/_variables.scss",
-		"/Users/roon/Dropbox/Current Projects/Tradeweb/Congeries/index.html",
-		"/Users/roon/Documents/_Repo/test/material/README.md",
-		"/Users/roon/Desktop/Bestica/html5up-spectral/govt.html",
-		"/Users/roon/Desktop/Bestica/html5up-spectral/assets/css/images/arrow.svg",
-		"/Users/roon/Desktop/Bestica/html5up-spectral/assets/css/images/bestica-logo-alt.svg",
-		"/Users/roon/Desktop/Bestica/html5up-spectral/assets/sass/style.scss",
-		"/Users/roon/Documents/_Repo/test/sophix/index.html",
-		"/Users/roon/Documents/_Repo/test/sophix/contact.html",
-		"/Users/roon/Documents/_Repo/test/sophix/sass/_bootstrap-variables.scss",
-		"/Users/roon/Documents/_Repo/test/sophix/sass/_custom.scss",
-		"/Users/roon/Documents/_Repo/test/sophix/sass/bootstrap/_jumbotron.scss",
-		"/Users/roon/Documents/_Repo/test/sophix/register.html",
-		"/Users/roon/Documents/_Repo/test/sophix/mri-question-2.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/sass/_custom.scss",
-		"/Users/roon/Documents/_Repo/test/sophictec/radios.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/stylesheets/styles.css",
-		"/Users/roon/Documents/_Repo/test/sophictec/sass/responsive/_large.scss",
-		"/Users/roon/Documents/_Repo/test/sophictec/sass/responsive/_medium.scss",
-		"/Users/roon/Documents/_Repo/test/sophictec/sass/responsive/_small.scss",
-		"/Users/roon/Documents/_Repo/test/sophictec/dashboard.html",
-		"/Users/roon/Desktop/Bestica/html5up-spectral/index.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/er-question-1.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/er-question-3.2.html",
-		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/StyleGuide/etfx-dealer-ticket-new2.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/survey-creation-temp.html",
-		"/Users/roon/Desktop/Bestica/html5up-spectral/elements.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/learn-question-6.html",
-		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/StyleGuide/etfx-dealer-ticket-ClosingNAV.html",
-		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/StyleGuide/images/cs.svg",
-		"/Users/roon/Documents/_Repo/test/sophictec/relapse-question-7.1.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/relapse-question-4.1.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/learn-question-7.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/er-question-4.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/mri-question-4.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/mri-question-2.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/mri-question-1.html",
-		"/Users/roon/Desktop/stuf/PSD to HTML service. You Design - We XHTML _ CSS. Convert Design to HTML online, PSD2HTML.com_files/code.css",
-		"/Users/roon/Desktop/stuf/PSD to HTML service. You Design - We XHTML _ CSS. Convert Design to HTML online, PSD2HTML.com_files/b239db8c-086f-4cbe-a8c7-47c0ef15ed08.css",
-		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/StyleGuide/Chrome.html",
-		"/Users/roon/Dropbox/Current Projects/Tradeweb/_ETF/StyleGuide/etfx-dealer-ticket.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/sass/_bootstrap-datepicker.scss",
-		"/Users/roon/Documents/_Repo/test/sophictec/sass/_bootstrap-variables.scss",
-		"/Users/roon/Documents/_Repo/test/sophictec/sass/bootstrap/_forms.scss",
-		"/Users/roon/Desktop/_Learn/snippits/index.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/javascripts/jquery-ui.js",
-		"/Users/roon/Documents/_Repo/test/sophictec/reports-filter.html",
-		"/Users/roon/Documents/_Repo/test/sophictec/javascripts/jquery-ui-old.js",
-		"/Users/roon/Desktop/_Learn/snippits/scripts/sortable.js",
-		"/Users/roon/Documents/_Repo/test/sophictec/javascripts/sophictec.js",
-		"/Users/roon/Documents/_Repo/test/sophictec/javascripts/sortable.js"
+		"/Users/roon/Dropbox/Current Projects/Tradeweb/_StyleGuide/resources/tw/css/sass/tw-main-phantom.scss"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -644,6 +634,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"russ",
+			"alaska",
+			"Outlying",
+			"former",
+			"British Indian Ocean",
+			"viet",
+			"george",
+			"&nbsp;",
+			"Austral",
+			"South America",
+			"Caribbean",
+			"Africa",
+			"Asia",
+			"united ",
+			"destination",
+			"content",
 			"colorblock ",
 			"include",
 			"00A2CC",
@@ -755,23 +761,7 @@
 			"togg",
 			"width: 75%",
 			"p {",
-			"width:200px;",
-			"width: 200px;",
-			"width: 200px",
-			".artifac",
-			"200px",
-			"artifact",
-			"fill=\"#",
-			"header",
-			"date",
-			"page-header",
-			"h1",
-			"page-header",
-			"36",
-			"va",
-			"dealer",
-			"inli",
-			"locate"
+			"width:200px;"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -779,6 +769,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\",\"",
+			"\\n",
+			"",
 			"2%",
 			"scripts/",
 			"0",
@@ -858,153 +851,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3298,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2001,
-								2001
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 305.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "scss/style.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 859,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								843,
-								843
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 927,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7,
-								7
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "css/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5907,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								662,
-								662
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 125.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "css/style.css.map",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 765,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1056,6 +904,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"autumn.sublime-project"
+			]
 		],
 		"width": 0.0
 	},
@@ -1085,7 +937,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 245.0,
+	"side_bar_width": 201.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

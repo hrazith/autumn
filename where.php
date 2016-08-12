@@ -11,7 +11,7 @@
 	}
 
     include_once("connect.php");
-	$sql = "SELECT CountryName FROM CountryList";
+	$sql = "SELECT CountryName, CountryCode FROM CountryList";
 	$result = $dbCon->query($sql);	
 ?>
 <!DOCTYPE html>
@@ -19,6 +19,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 	</head>
 	<body>
 		<header> 
@@ -44,19 +45,21 @@
 				<div class="col-1-1">
 					<div class="destination-selector">
 						<div class="select">
-							<select name="countries" onchange="showContext(this.value)">
-								<option>Where do you want to go?</option>
-								<?php
-						  			if ($result->num_rows > 0) {
-						                // output data of each row
-						                while($row = $result->fetch_assoc()) {
-						                    echo "<option>". $row["CountryName"]."</option>";
-						                }
-						            } else {
-						                echo "0 results";
-						            } 
-						  		?>
-						  	</select>
+							<form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post">
+								<select name="country" id="country-select">
+									<option>Where do you want to go?</option>
+									<?php
+							  			if ($result->num_rows > 0) {
+							                // output data of each row
+							                while($row = $result->fetch_assoc()) {
+							                    echo "<option data-code='".$row["CountryCode"]."' >". $row["CountryName"]."</option>";
+							                }
+							            } else {
+							                echo "0 results";
+							            } 
+							  		?>
+							  	</select>
+						  	</form>
 						</div>
 					</div>
 					<div id="instructions">
@@ -72,45 +75,49 @@
 					</div>
 				</div>
 			</div>
-			
+
+			<?php if (!empty($_POST)): ?>
+				<?php 
+					$country = $_POST["country"];
+					$countryId = mysqli_fetch_row(mysqli_query($dbCon, "SELECT CountryListId FROM CountryList WHERE CountryName='$country'"));
+									//$roww = mysqli_fetch_row(mysqli_query($dbCon, "SELECT CountryVisaTypeListId FROM CountryVisaTypeList WHERE CountryVisaType='B-2'")); 
+					$visatype = mysqli_fetch_row(mysqli_query($dbCon, "SELECT CountryVisaType FROM CountryVisaTypeList WHERE CountryVisaTypeDescription LIKE '%tourism%'"));
+					$appnumber = "APP"."00".$userId.$countryId[0].$visatype[0];
+					$app_exists = mysqli_fetch_row(mysqli_query($dbCon,"SELECT * FROM CustAppInfo WHERE CustAppNumber='$appnumber' AND Activated='1'"));
+				?>
+			    <p> Welcome!<br>
+			    	Your country is <?php echo htmlspecialchars($_POST["country"]); ?>.<br>
+			    	Your Application number is <?php echo $appnumber; ?>.<br>
+			    	Your Query result is <?php echo $rowarray[0]; ?>.<br>
+			    	<?php if ($app_exists>0):?> 
+			    		<p> App exists!</p>
+			    		
+			    	<?php else: ?>
+						  
+					<?php endif; ?>
+			   	</p>
+			   	<script type="text/javascript">
+			    		$("#country-select").val('<?php echo $_POST["country"];?>');
+			    		var code= $("#country-select option:selected").attr('data-code').toLowerCase();
+				    	var url = "fragments/"+code+".php";
+				    	$("#instructions").load(url);
+			    </script>
+			<?php else: ?>
+				<p> You need to choose a country to vist!</p>  
+			<?php endif; ?>		
 		</div>
+
 		
+
+
 
 		<script type="text/javascript">
-			function showContext(context) {
-
-			var words, acronym, nextWord;
-			words = context.split(' ');
-			acronym = "";
-			index = 0
-
-			while (index < words.length) {
-				nextWord = words[index];
-				acronym = acronym + nextWord.charAt(0);
-				index = index + 1;
-			}
-
-			acronym = acronym.toLowerCase() + ".php"
-
-			var xhttp;
-			if (context == "") {
-				document.getElementById("instructions").innerHTML = "";
-				return;
-			}
-			xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-					document.getElementById("instructions").innerHTML = xhttp.responseText;
-				}
-			};
-			xhttp.open("GET", acronym, true);
-			xhttp.send();
-
-			//alert(acronym);
-
-			}
+			$('#country-select').change(context);
+			function context(){
+				$(this).parents("form").submit();
+			}	
 		</script>
-		
+
 	</body>
 
 </html>
