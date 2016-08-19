@@ -4,27 +4,32 @@
 
 	if (isset($_SESSION['id'])) {
 		$userId = $_SESSION['id'];
-		$countryId = $_SESSION['countryid'];
-		$visatype = $_SESSION['visatype'];
-		$visaid = $_SESSION['visaid'];
 	} else {
 		header('Location: index.php');
 		die();
 	}
 
     include_once("connect.php");
-    // create app number fillin the record
-    $appnumber = "APP"."00".$userId.$countryId.$visatype;
-    $sql = "INSERT INTO CustAppInfo (CustProfileInfoId, CountryListId, CountryVisaTypeListId, CustAppNumber)
-	VALUES ('$userId', '$countryId', '$visaid', '$appnumber')";
 
-	if (mysqli_query($dbCon, $sql)) {
-		$last_id = mysqli_insert_id($dbCon);
-		$_SESSION['appnumber']=$appnumber;
-		$_SESSION['appId']=$last_id;
+    if (isset($_SESSION['newapp'])) {
+		$sql = "INSERT INTO CustAppInfo (CustProfileInfoId, CountryListId, CountryVisaTypeListId, CustAppNumber, CreatedOn, ModifiedOn) VALUES ('{$_SESSION['id']}', '{$_SESSION['countryid']}', '{$_SESSION['visaid']}', '{$_SESSION['appnumber']}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
+		if (mysqli_query($dbCon, $sql)) {
+			$last_id = mysqli_insert_id($dbCon);
+			$_SESSION['appId']=$last_id;
+			echo "Success!";
+		} else {
+		    echo "Error: " . $sql . "<br>" . mysqli_error($dbCon);
+		}
 	} else {
-	    echo "Error: " . $sql . "<br>" . mysqli_error($dbCon);
+		$sql = "UPDATE CustAppInfo SET ModifiedOn= CURRENT_TIMESTAMP WHERE CustAppInfoId='{$_SESSION['appId']}'";
+		if (mysqli_query($dbCon, $sql)) {
+			echo "Updated App!";
+		} else {
+		    echo "Error: " . $sql . "<br>" . mysqli_error($dbCon);
+		}
 	}
+
+    
 
 	mysqli_close($dbCon);
 ?>

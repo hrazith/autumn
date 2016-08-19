@@ -1,0 +1,41 @@
+
+/*
+ * Intake forms, componets and elements
+ * 
+ */
+
+/* ==========================================================================
+   IN TAKE
+   ========================================================================== */
+
+.intake-utils{
+
+}
+
+.intake-utils ul li, .intake-utils ul li a {
+	color: #2e2e2e;
+}
+
+.intake-utils ul li a:hover { color: #FDBD62; }
+
+.intake-inner{
+	width: 978px;
+	margin: 0 auto;
+}
+
+
+
+.actions-panel {
+	background: var(--brand-accent);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	height: 120px;
+}
+
+.formnav {
+	margin-top: 30px;
+}
+

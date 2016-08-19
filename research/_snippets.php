@@ -19,4 +19,16 @@
 	$appnumber = "APP"."00".$userId.$row[0].$visatype.$country;
 	//using a variable inisde a query
 	$sql = "SELECT CustProfileInfoId, EmailAddress, Password FROM CustProfileInfo WHERE EmailAddress = '$email' AND Activated = '1' LIMIT 1";
+
+	//using session variables in query
+	$sql = mysql_query("INSERT INTO $tbl_name VALUES('','$eventname','{$_SESSION['myusername']}')");
 ?>
+
+How to access PHP session variables from jQuery function in a .js file?
+
+I was struggling with the same problem and stumbled upon this page. Another solution I came up with would be this :
+In your html, echo the session variable (mine here is $_SESSION['origin']) to any element of your choosing : <p id="sessionOrigin"><?=$_SESSION['origin'];?></p>
+In your js, using jQuery you can access it like so : $("#sessionOrigin").text();
+EDIT: or even better, put it in a hidden input
+
+<input type="hidden" name="theOrigin" value="<?=$_SESSION['origin'];?>"></input>

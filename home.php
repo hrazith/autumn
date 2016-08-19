@@ -23,7 +23,7 @@
 				<form method ="post" action="logout.php">
 				<ul>
 					<li class="date"> June 13, 2015</li>
-					<li class="date"> <?php echo $email; ?></li>
+					<li class="date"> <?php echo $_SESSION['username'] ?></li>
 					<li> 
 						<select>
 							<option class="firstOpt" value="en">English</option>

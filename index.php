@@ -8,20 +8,22 @@
 		$password = strip_tags($_POST['password']);
 
 
-	    $sql = "SELECT CustProfileInfoId, EmailAddress, Password FROM CustProfileInfo WHERE EmailAddress = '$email' AND Activated = '1' LIMIT 1";
+	    $sql = "SELECT CustProfileInfoId, UserName, EmailAddress, Password FROM CustProfileInfo WHERE EmailAddress = '$email' AND Activated = '1' LIMIT 1";
 
 	    $query = mysqli_query($dbCon, $sql);
 
 	    if ($query) {
 	    	$row = mysqli_fetch_row($query);
 	    	$userId = $row[0];
-	    	$dbEmail = $row[1];
-	    	$dbPassword = $row[2];
+	    	$username = $row[1];
+	    	$dbEmail = $row[2];
+	    	$dbPassword = $row[3];
 	    }
 
 	    if ($email == $dbEmail && $password == $dbPassword) {
 	    	$_SESSION['email'] = $email;
 	    	$_SESSION['id'] = $userId;
+	    	$_SESSION['username'] = $username;
 	    	header('Location: home.php');
 	    } else { 
 			/*$err= "Incorrect email or password";*/

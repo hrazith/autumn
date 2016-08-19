@@ -1,19 +1,12 @@
-(function() {
-
-	function move() {
-		var elem = document.getElementById("myBar");
-		var width = 1;
-		var id = setInterval(frame, 10);
-
-		function frame() {
-			if (width >= 100) {
-				clearInterval(id);
-			} else {
-				width++;
-				elem.style.width = width + '%';
-			}
-		}
-	}
+$(function() {
+	var numItems = $('.form-intake').length;
+	var completed = 1;
+	percent = (completed / numItems) * 100;
+	//alert(percent);
+	TweenMax.to("#bar", 2, {
+		width: "80%"
+	});
 
 
-})();
+
+});

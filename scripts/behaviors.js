@@ -1,18 +1,42 @@
 $(function() {
+	var numItems = $('.form-intake').length;
+	var i = 1;
+	var queryString = "";
 
-	//localise
-	$("[data-localize]").localize("translations/example", {
-		language: "fr"
+
+	$("#next").click(function(event) {
+
+		if (i <= numItems) {
+			queryString = $('form').serialize();
+
+			$("#step" + i).addClass('hide');
+			$("#step" + (i + 1)).removeClass('hide');
+			percent = (i / numItems) * 100;
+			TweenMax.to("#bar", 2, {
+				width: percent + "%"
+			});
+			i++;
+
+			alert(queryString);
+
+		}
+
+	});
+	$("#back").click(function(event) {
+		alert(numItems);
 	});
 
-	//Context switcher 
 
-
-	$('.nom-header').click(function() {
-		$(this).find('.icon-arrow-up').toggleClass('hide');
-		$(this).find('.icon-arrow-down').toggleClass('hide')
-		$(this).siblings('.noms').slideToggle();
-
-	});
 
 });
+
+//http://stackoverflow.com/questions/607673/setting-a-php-sessionvar-using-jquery
+
+/*TweenMax.to("#bar", 2, {
+	width: percent + "%",
+	onComplete: endFrame
+});
+
+function endFrame() {
+	alert("Hello");
+	$('#step1 form').submit();*/
