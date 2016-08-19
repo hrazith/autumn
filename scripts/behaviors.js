@@ -3,12 +3,12 @@ $(function() {
 	var i = 1;
 	var queryString = "";
 
+	$("#start").click(function(event) {
+		$(".intro, #step1 ").toggleClass('hide');
+	});
 
 	$("#next").click(function(event) {
-
 		if (i <= numItems) {
-			queryString = $('form').serialize();
-
 			$("#step" + i).addClass('hide');
 			$("#step" + (i + 1)).removeClass('hide');
 			percent = (i / numItems) * 100;
@@ -16,14 +16,15 @@ $(function() {
 				width: percent + "%"
 			});
 			i++;
-
-			alert(queryString);
-
 		}
-
 	});
-	$("#back").click(function(event) {
-		alert(numItems);
+
+	$(".save").click(function(event) {
+		queryString = $('form').serialize();
+		//alert(queryString);
+		$.post('processds.php', queryString, function(data) {
+			$('#result').html(data);
+		});
 	});
 
 

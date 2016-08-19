@@ -9,7 +9,6 @@
 		header('Location: index.php');
 		die();
 	}
-
     include_once("connect.php");
 	$sql = "SELECT CountryName, CountryCode FROM CountryList";
 	$result = $dbCon->query($sql);	
@@ -96,23 +95,20 @@
 					$app_exists = mysqli_fetch_row(mysqli_query($dbCon,"SELECT * FROM CustAppInfo WHERE CustAppNumber='$appnumber' AND Activated='1'"));
 				?>
 			    <p> Welcome!<br>
-			    	Your country is <?php echo htmlspecialchars($_POST["country"]); ?>.<br>
+			    	The country you want to visit is <?php echo htmlspecialchars($_POST["country"]); ?>.<br>
 			    	Your Application number is <?php echo $appnumber; ?>.<br>
-			    	Your Query result is <?php echo $rowarray[0]; ?>.<br>
-			    	<?php if ($app_exists>0):?> 
-			    		<p> App exists!</p>
+			    	<?php if ($app_exists):?> 
+			    		<p> Tou have already started an application!</p>
 			    		<?php $_SESSION['appId']=$app_exists[0]; ?>
-			    		<?php echo $app_exists[9]; ?>
+			    		<?php echo "Last updated: ".$app_exists[9]; ?>
 			    		<script type="text/javascript">
 				    		$(document).ajaxComplete(function(){
 								$("#act").attr('value', 'Resume DS-160');
 								$(".action .updated").text('<?php echo "Last updated: ".$app_exists[9]; ?>');
 							});
 						</script>
-			    		
 			    	<?php else: ?>
 			    		<?php $_SESSION['newapp']=1; ?>
-						  
 					<?php endif; ?>
 			   	</p>
 			   	<script type="text/javascript">

@@ -24,7 +24,7 @@
 			</p>
 		</div>
 		<div class="col-1-3">
-			<form method ="post" action="ds160-1.php">
+			<form method ="post" action="ds.php">
 			<div class="action">
 				<input type="submit" name="submit" class="primary rounded" id="act" value="Start DS-160"/>
 				<p class="updated"> </p>

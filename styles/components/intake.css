@@ -8,10 +8,6 @@
    IN TAKE
    ========================================================================== */
 
-.intake-utils{
-
-}
-
 .intake-utils ul li, .intake-utils ul li a {
 	color: #2e2e2e;
 }
@@ -23,6 +19,14 @@
 	margin: 0 auto;
 }
 
+.intake-inner .intro {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.intro p {
+	margin: 50px;
+}
 
 
 .actions-panel {
