@@ -28,7 +28,7 @@
 				<form method ="post" action="logout.php">
 				<ul>
 					<li class="date"> June 13, 2015</li>
-					<li class="date"> <?php echo $email; ?></li>
+					<li class="date"> <?php echo $_SESSION['username'] ?></li>
 					<li> <a><i class="icon-settings"></i>Settings</a></li>
 					<li> <input type="submit" name="submit" class="naked" value="Log Out"/></li>
 				</ul>
@@ -88,7 +88,7 @@
 
 					// Set session variables to create an application
 					$_SESSION['appnumber']=$appnumber;
-					$_SESSION['countryid']=$countryId;
+					$_SESSION['countryid']=$countryId[0];
 					$_SESSION['visatype']=$visatype[0];
 					$_SESSION['visaid']=$visaid[0];
 

@@ -26,19 +26,24 @@
 				<ul>
 					<li><?php echo date("Y-m-d") ?></li>
 					<li> <a class="save" href="#">Save</a></li>
-					<li> <a class="save" href="#">Close</a></li>
+					<li> <a class="save" href="where.php">Close</a></li>
 				</ul>
 				</form>
 			</div>
 		</header>
 		<div class="content-intake">
 			<div class="intake-inner">
+				<div id="status" class="test"></div> 
 				<div class="intro">
 					<h1 data-localize="greeting"> DS-160</h1>
-					<p id="result">Online Nonimmigrant Visa Application form, is for temporary travel to the United States, and for K (fiancé(e)) visas. Form DS-160 is submitted electronically to the Department of State website via the Internet. Consular Officers use the information entered on the DS-160 to process the visa application and, combined with a personal interview, determine an applicant’s eligibility for a nonimmigrant visa.
-					</p>
-					<input type="submit" name="submit" class="primary rounded" value="Start" id="start"/>
-					<p> <?php echo $_SESSION['id'].$_SESSION['appId'] ?>  </p>
+					<?php if ($_SESSION['newapp']==1):?> 
+						<p>Online Nonimmigrant Visa Application form, is for temporary travel to the United States, and for K (fiancé(e)) visas. Form DS-160 is submitted electronically to the Department of State website via the Internet. Consular Officers use the information entered on the DS-160 to process the visa application and, combined with a personal interview, determine an applicant’s eligibility for a nonimmigrant visa.
+						</p>
+						<input type="submit" name="submit" class="primary rounded" value="Start" id="start"/>
+					<?php else: ?>
+						<p>You have an app already<?php echo $_SESSION['id'].$_SESSION['appId'] ?>  </p>
+						<input type="submit" name="submit" class="primary rounded" value="Start" id="start"/>
+					<?php endif; ?>
 				</div>
 				<?php include_once("fragments/ds160/step1.php"); ?>
 				<?php include_once("fragments/ds160/step2.php"); ?>

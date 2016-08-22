@@ -19,11 +19,22 @@ $(function() {
 		}
 	});
 
+	$("#back").click(function(event) {
+		if (i > 1) {
+			$("#step" + i).addClass('hide');
+			$("#step" + (i - 1)).removeClass('hide');
+			i--;
+		}
+
+		//$(".form-intake:not(.hide)").addClass('test');
+
+	});
+
 	$(".save").click(function(event) {
 		queryString = $('form').serialize();
 		//alert(queryString);
 		$.post('processds.php', queryString, function(data) {
-			$('#result').html(data);
+			$('#status').html(data);
 		});
 	});
 
