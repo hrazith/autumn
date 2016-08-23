@@ -22,7 +22,15 @@
 
 	//using session variables in query
 	$sql = mysql_query("INSERT INTO $tbl_name VALUES('','$eventname','{$_SESSION['myusername']}')");
+
+	// setting value in form if it already exists in db
+	value="<?php echo isset($cust['Last_Name']) ? $cust['Last_Name'] : '' ?>"
+
+	
+
 ?>
+
+//**FORM**//
 
 How to access PHP session variables from jQuery function in a .js file?
 
@@ -32,3 +40,8 @@ In your js, using jQuery you can access it like so : $("#sessionOrigin").text();
 EDIT: or even better, put it in a hidden input
 
 <input type="hidden" name="theOrigin" value="<?=$_SESSION['origin'];?>"></input>
+
+
+<option value="January"<?=$row['month'] == 'January' ? ' selected="selected"' : '';?>>January</option>
+
+<input type="radio" name="sex" value="Male" <?php echo ($sex=='Male')?'checked':'' ?>>Male

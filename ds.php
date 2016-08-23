@@ -23,7 +23,9 @@
 		<header> 
 			<div class="intake-utils">
 				<form>
+
 				<ul>
+					<li id="status" class="alert"></li>
 					<li><?php echo date("Y-m-d") ?></li>
 					<li> <a class="save" href="#">Save</a></li>
 					<li> <a class="save" href="where.php">Close</a></li>
@@ -32,8 +34,7 @@
 			</div>
 		</header>
 		<div class="content-intake">
-			<div class="intake-inner">
-				<div id="status" class="test"></div> 
+			<div class="intake-inner"> 
 				<div class="intro">
 					<h1 data-localize="greeting"> DS-160</h1>
 					<?php if ($_SESSION['newapp']==1):?> 
@@ -43,6 +44,17 @@
 					<?php else: ?>
 						<p>You have an app already<?php echo $_SESSION['id'].$_SESSION['appId'] ?>  </p>
 						<input type="submit" name="submit" class="primary rounded" value="Start" id="start"/>
+						<?php
+							include_once("connect.php");
+							$columns =  mysqli_query($dbCon,"SHOW COLUMNS FROM CustPersonalInfo"); 
+							$result2 = mysqli_fetch_row(mysqli_query($dbCon,"SELECT * FROM CustPersonalInfo WHERE CustAppInfoId = '{$_SESSION['appId']}'"));
+							$i=0;
+							while($row = mysqli_fetch_array($columns)){
+								$cust[$row['Field']] = $result2[$i];	
+								$i++;
+							}
+							mysqli_close($dbCon);
+						?>
 					<?php endif; ?>
 				</div>
 				<?php include_once("fragments/ds160/step1.php"); ?>

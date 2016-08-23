@@ -2,7 +2,7 @@
 	
 		<form >
 			
-			<input type="text" placeholder="Last Name" name="lname"/>
+			<input type="text" placeholder="Last Name" name="lname" value="<?php echo isset($cust['Last_Name']) ? $cust['Last_Name'] : '' ?>"/>
 		  
 		</form>
 

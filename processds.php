@@ -28,11 +28,13 @@
 		$sql2 = "INSERT INTO CustPersonalInfo (
 			CustAppInfoId,
 			Sex,
+			Marital_Status,
 			First_Name,
 			Last_Name
 			) VALUES (
 			'{$_SESSION['appId']}',
 			'{$_REQUEST['gender']}',
+			'{$_REQUEST['mstatus']}', 
 			'{$_REQUEST['fname']}',
 			'{$_REQUEST['lname']}'
 			)";
@@ -47,6 +49,7 @@
 
 		$sql1 = "UPDATE CustPersonalInfo SET 
 			Sex = '{$_REQUEST['gender']}',
+			Marital_Status = '{$_REQUEST['mstatus']}', 
 			First_Name = '{$_REQUEST['fname']}',
 			Last_Name = '{$_REQUEST['lname']}'
 			WHERE 
@@ -61,7 +64,7 @@
 			WHERE
 			CustAppInfoId='{$_SESSION['appId']}'";
 		if (mysqli_query($dbCon, $sql2)) {
-			echo "Timestamped!";
+			echo " and timestamped!";
 		}
 
 	}

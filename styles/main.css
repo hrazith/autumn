@@ -71,6 +71,7 @@ p {
 
 
 .test { border:1px dotted red; }
+.alert { color: var(--brand-alert) !important; }
 
 
 
