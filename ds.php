@@ -28,7 +28,7 @@
 					<li id="status" class="alert"></li>
 					<li><?php echo date("Y-m-d") ?></li>
 					<li> <a class="save" href="#">Save</a></li>
-					<li> <a class="save" href="where.php">Close</a></li>
+					<li> <a class="save" href="profile.php">Close</a></li>
 				</ul>
 				</form>
 			</div>
