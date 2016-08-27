@@ -92,7 +92,7 @@ h1 {
 }
 
 h2.title { 
-	color: var(--brand-color);
+	color: var(--brand-primary);
 	font-size: 22px;
 	font-weight: 600;
 	display: inline-block;
@@ -118,11 +118,14 @@ h2 {
 	color: #909090;
 }
 
+.major-silos {
+	margin-top: 50px;
+}
 
-
-.silo {
-	background: #243248;
+.silo, .application {
+	background: var(--brand-primary);
 	height: 140px;
+	padding: 14px;
 }
 
 .silo:hover {
@@ -130,9 +133,6 @@ h2 {
 	cursor: pointer;
 }
 
-.silo, .discovery {
-		padding: 14px;
-}
 
 .silo i { font-size: 32px; color:#909090;}
 .silo h2 { margin-top: 32px;}
@@ -146,11 +146,12 @@ h2 {
 
 /* Discovery */
 
-.discovery{
-	background: #FDBD62;
-	color:#424242;
+.discovery, .dashboard{
 	position: relative;
 	height: 480px;
+	background: var(--brand-secondary);
+	color:#424242;
+	padding: 14px;
 }
 
 .destination {
@@ -158,6 +159,26 @@ h2 {
 	position: absolute;
 	top: 30px;
 	right: 0;
+}
+
+.application {
+	width: 100%;
+	height: 60px;
+	background: var(--brand-primary);
+	margin-bottom: 14px;
+
+}
+
+.application:hover{
+	cursor: pointer;
+}
+
+.application h3 {
+	font-size: 14px;
+	font-weight: bold;
+		color: #909090;
+	margin-bottom: 6px;
+
 }	
 
 .destination-selector{
@@ -180,7 +201,7 @@ h2 {
 .stat-overlay h3 {
 	font-weight: 700;
 	font-size: 68px;
-	color: var(--brand-color);
+	color: var(--brand-primary);
 }
 
 .stat-overlay a {
@@ -194,6 +215,13 @@ h2 {
 	width: 100%;
 	text-align: center;
 	padding: 30px;
+}
+
+.avatar h3 {
+	margin-left: 30px;
+	color: var(--brand-primary);
+	font-weight: bold;
+
 }
 
 

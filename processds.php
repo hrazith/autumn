@@ -30,13 +30,15 @@
 			Sex,
 			Marital_Status,
 			First_Name,
-			Last_Name
+			Last_Name,
+			Other_Name_Used
 			) VALUES (
 			'{$_SESSION['appId']}',
 			'{$_REQUEST['gender']}',
 			'{$_REQUEST['mstatus']}', 
 			'{$_REQUEST['fname']}',
-			'{$_REQUEST['lname']}'
+			'{$_REQUEST['lname']}',
+			'{$_REQUEST['onames']}'
 			)";
 
 		if (mysqli_query($dbCon, $sql2)) {
@@ -51,7 +53,8 @@
 			Sex = '{$_REQUEST['gender']}',
 			Marital_Status = '{$_REQUEST['mstatus']}', 
 			First_Name = '{$_REQUEST['fname']}',
-			Last_Name = '{$_REQUEST['lname']}'
+			Last_Name = '{$_REQUEST['lname']}',
+			Other_Name_Used ='{$_REQUEST['onames']}'
 			WHERE 
 			CustAppInfoId='{$_SESSION['appId']}'";
 		//update Modified in appInfoId table 

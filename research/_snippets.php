@@ -17,6 +17,7 @@
 
 
 	$appnumber = "APP"."00".$userId.$row[0].$visatype.$country;
+	
 	//using a variable inisde a query
 	$sql = "SELECT CustProfileInfoId, EmailAddress, Password FROM CustProfileInfo WHERE EmailAddress = '$email' AND Activated = '1' LIMIT 1";
 

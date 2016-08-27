@@ -21,9 +21,19 @@
 				</ul>
 			</div>
 			<div class="col-1-4">
-				<h2>Other</h2>	
+				<h2>Other</h2>
+				<h3>Have you used any other names?</h3>
+				<ul class="input-list othernames">
+					<li>
+						<input type="radio" name="onames" value="yes" 
+						<?php echo($cust['Other_Name_Used']=='yes')?'checked':'' ?>> Yes
+					</li>
+					<li>
+						<input type="radio" name="onames" value="no" 
+						<?php echo($cust['Other_Name_Used']=='no')?'checked':'' ?>> No
+					</li>
+				</ul>
 			</div>
-			
 		</div>
 	</form>
 </div>

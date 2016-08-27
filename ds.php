@@ -9,7 +9,6 @@
 		header('Location: index.php');
 		die();
 	}
-	
 ?>
 <!doctype html>
 <html>
@@ -62,10 +61,9 @@
 				<?php include_once("fragments/ds160/step3.php"); ?>
 			</div>
 		</div>
-
 		<div class="actions-panel">
-			<div id="progress">
-  				<div id="bar"></div>
+			<div class="progress">
+  				<div class="bar"></div>
 			</div>
 			<div class="formnav">
 				<input type="submit" name="submit" class="primary rounded" value="Back" id="back"/>	

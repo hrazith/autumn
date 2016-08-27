@@ -138,14 +138,14 @@ input.naked:hover {
 
 
 /** Progress Bar */
-#progress {
+.progress {
   position: relative;
   width: 100%;
   height: 12px;
   background-color: #ddd;
 }
 
-#bar {
+.bar {
   position: absolute; 
   width: 1%;
   height: 100%;

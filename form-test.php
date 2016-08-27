@@ -35,6 +35,7 @@
 	<body>
 	<?php
 		echo "Total number of Colums:".$numColumns[0]."<br/>"; 
+		echo "Total number of Colums:".sizeof(mysqli_fetch_array($columns))."<br/>";
 		echo "xxx:".$row2['cnt']."<br/>";
 		while($row = mysqli_fetch_array($columns)){
 			echo $row['Field']." ".$result2[$i]."<br>";
@@ -49,7 +50,15 @@
 
 	?>
 	<input type="text" name="myField1" value="<?php echo isset($cust['Last_Name']) ? $cust['Last_Name'] : '' ?>" />
-	<?php echo $txt; ?>
+	<?php 
+		echo $txt; 
+		$result3= mysqli_query($dbCon,$txt); 
+		$row3 = mysqli_fetch_array($result3);
+		echo "<br/>xxx:".$row3['cnt']."<br/>";
+
+
+	?>
+
 
 	</body>
 </html>

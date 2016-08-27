@@ -16,6 +16,10 @@ header {
     color: #fff;
 }
 
+header a {
+	color: #fff;
+}
+
 .logo {
 	font-weight: 800;
 	font-size: 36px;
@@ -57,7 +61,7 @@ header {
 	height: 80px;
 	top: 0;
 	left: 0;
-	background-color: var(--brand-color);
+	background-color: var(--brand-primary);
 	display: table;
 	z-index: 2;
 }

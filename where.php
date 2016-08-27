@@ -22,22 +22,8 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 	</head>
 	<body>
-		<header> 
-			<div class="logo"> Autumn</div>
-			<div class="global-nav">
-				<form method ="post" action="logout.php">
-				<ul>
-					<li class="date"> June 13, 2015</li>
-					<li class="date"> <?php echo $_SESSION['username'] ?></li>
-					<li> <a><i class="icon-settings"></i>Settings</a></li>
-					<li> <input type="submit" name="submit" class="naked" value="Log Out"/></li>
-				</ul>
-				</form>
-			</div>
-		</header>
-		<div class="hero">	
-			&nbsp;
-		</div>
+		<?php include_once("fragments/header.php"); ?>
+
 		<div class="content">
 
 			
