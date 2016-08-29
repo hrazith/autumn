@@ -11,7 +11,9 @@ $(function() {
 		if (i <= numItems) {
 			$("#step" + i).addClass('hide');
 			$("#step" + (i + 1)).removeClass('hide');
-			percent = (i / numItems) * 100;
+			//percent = (i / numItems) * 100;
+
+			console.log(percent);
 			TweenMax.to(".progress .bar", 2, {
 				width: percent + "%"
 			});
