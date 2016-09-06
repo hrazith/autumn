@@ -1,7 +1,7 @@
 CREATE PROCEDURE procDS160Insert (IN AppNumberId INT,
       IN First_Name VARCHAR(500),
       IN Last_Name VARCHAR(500),
-	  IN Full_Name_In_Native_Language VARCHAR(500),
+	  IN Full_Name_In_Native_Alphabet VARCHAR(500),
 	  IN Other_Name_Used VARCHAR(50),
 	  IN Other_Name_1 VARCHAR(500),
 	  IN Other_Name_2 VARCHAR(500),

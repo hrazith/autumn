@@ -6,6 +6,8 @@
  
 	if ($_SESSION['newapp']==1){
 
+		
+
 		$sql = "INSERT INTO CustAppInfo (
 			CustProfileInfoId,
 			CountryListId,
@@ -18,14 +20,14 @@
 			'{$_SESSION['visaid']}',
 			'{$_SESSION['appnumber']}',
 			CURRENT_TIMESTAMP
-			)";
+			)"; 
 
 		if (mysqli_query($dbCon, $sql)) {
 			$_SESSION['appId'] = mysqli_insert_id($dbCon);
-			echo "Record created successfully";
+			echo "Record created successfully".$_SESSION['appId'];
 		}
 
-		$sql2 = "INSERT INTO CustPersonalInfo (
+		/*$sql2 = "INSERT INTO CustPersonalInfo (
 			CustAppInfoId,
 			Sex,
 			Marital_Status,
@@ -39,6 +41,15 @@
 			'{$_REQUEST['fname']}',
 			'{$_REQUEST['lname']}',
 			'{$_REQUEST['onames']}'
+			)";*/
+
+
+			$sql2 = "CALL procInsert(
+			'{$_SESSION['appId']}', 
+			'{$_REQUEST['fname']}',
+			'{$_REQUEST['lname']}',
+			'{$_REQUEST['nname']}'
+
 			)";
 
 		if (mysqli_query($dbCon, $sql2)) {
