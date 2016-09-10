@@ -4,7 +4,7 @@
 <?php
 	include_once("connect.php");
 	//Call DS160 StoreProc and create an array, $cust[] 
-	//to copy all the stored values. Also calculte %complete
+	//to copy all the stored values. 
 	while($row = mysqli_fetch_assoc(mysqli_query($dbCon, "CALL procLoadDS160('{$_SESSION['id']}', '{$_SESSION['countryid']}', '{$_SESSION['visaid']}')"))){
 	$percentComplete=floor((count(array_filter($row))/count($row))*100);
 	//create an array with key, value pair corresponding column names and its entry

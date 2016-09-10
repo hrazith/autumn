@@ -2,11 +2,12 @@
 	session_start();
 	include_once("connect.php");
 
+// If this is a completely new application then create an application at CustAppInfo
+// and make sesssion variable for appId.
+// Use the appId to inserst a new CustProfileInfo1
 
  
 	if ($_SESSION['newapp']==1){
-
-		
 
 		$sql = "INSERT INTO CustAppInfo (
 			CustProfileInfoId,
@@ -27,29 +28,28 @@
 			echo "Record created successfully".$_SESSION['appId'];
 		}
 
-		/*$sql2 = "INSERT INTO CustPersonalInfo (
-			CustAppInfoId,
-			Sex,
-			Marital_Status,
-			First_Name,
-			Last_Name,
-			Other_Name_Used
-			) VALUES (
-			'{$_SESSION['appId']}',
-			'{$_REQUEST['gender']}',
-			'{$_REQUEST['mstatus']}', 
-			'{$_REQUEST['fname']}',
-			'{$_REQUEST['lname']}',
-			'{$_REQUEST['onames']}'
-			)";*/
 
-
-			$sql2 = "CALL procInsert(
+		$sql2 = "CALL procDS160CustPersonalInfo1Insert(
 			'{$_SESSION['appId']}', 
 			'{$_REQUEST['fname']}',
 			'{$_REQUEST['lname']}',
-			'{$_REQUEST['nname']}'
-
+			'{$_REQUEST['nname']}',
+			'{$_REQUEST['onameUsed']}',
+			'{$_REQUEST['oname1']}',
+			'{$_REQUEST['oname2']}',
+			'{$_REQUEST['oname3']}',
+			'{$_REQUEST['gender']}',
+			'{$_REQUEST['mstatus']}',
+			'{$_REQUEST['dob']}',
+			'{$_REQUEST['bcity']}',
+			'{$_REQUEST['bstate']}',
+			'{$_REQUEST['nationality']}',
+			'{$_REQUEST['onationality']}',
+			'{$_REQUEST['nid']}',
+			'{$_REQUEST['ssn']}',
+			'{$_REQUEST['taxId']}',
+			'{$_REQUEST['address']}',
+			'{$_REQUEST['city']}'
 			)";
 
 		if (mysqli_query($dbCon, $sql2)) {
@@ -57,21 +57,40 @@
 			$_SESSION['newapp']=0;
 		}
 
+// If the user had already initiated an application then 
+// then simply upadate the existing CustProfileInfo1
+
 
 	} else {
+		$sql1 = "CALL procDS160CustPersonalInfo1Update(
+			'{$_SESSION['appId']}', 
+			'{$_REQUEST['fname']}',
+			'{$_REQUEST['lname']}',
+			'{$_REQUEST['nname']}',
+			'{$_REQUEST['onameUsed']}',
+			'{$_REQUEST['oname1']}',
+			'{$_REQUEST['oname2']}',
+			'{$_REQUEST['oname3']}',
+			'{$_REQUEST['gender']}',
+			'{$_REQUEST['mstatus']}',
+			'{$_REQUEST['dob']}',
+			'{$_REQUEST['bcity']}',
+			'{$_REQUEST['bstate']}',
+			'{$_REQUEST['nationality']}',
+			'{$_REQUEST['onationality']}',
+			'{$_REQUEST['nid']}',
+			'{$_REQUEST['ssn']}',
+			'{$_REQUEST['taxId']}',
+			'{$_REQUEST['address']}',
+			'{$_REQUEST['city']}'
+			)";
 
-		$sql1 = "UPDATE CustPersonalInfo SET 
-			Sex = '{$_REQUEST['gender']}',
-			Marital_Status = '{$_REQUEST['mstatus']}', 
-			First_Name = '{$_REQUEST['fname']}',
-			Last_Name = '{$_REQUEST['lname']}',
-			Other_Name_Used ='{$_REQUEST['onames']}'
-			WHERE 
-			CustAppInfoId='{$_SESSION['appId']}'";
-		//update Modified in appInfoId table 
 		if (mysqli_query($dbCon, $sql1)) {
 			echo "Record updated successfully";
+		} else {
+			echo mysqli_error($dbCon);
 		}
+		
 
 		$sql2 = "UPDATE CustAppInfo SET
 			ModifiedOn = CURRENT_TIMESTAMP
