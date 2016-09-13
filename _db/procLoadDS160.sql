@@ -114,7 +114,7 @@ BEGIN
  LEFT JOIN custworkeducationtraininginfo cw ON cp1.CustAppInfoId = cw.CustAppInfoId
  LEFT JOIN custlocalinfo cl ON cp1.CustAppInfoId = cl.CustAppInfoId
  LEFT JOIN custpreparerappinfo cpa ON cp1.CustAppInfoId = cpa.CustAppInfoId
- WHERE cp1.CustAppInfoId = (SELECT CustAppInfoId FROM custappinfo where CustProfileInfoId = 8 and CountryListId = 224 and CountryVisaTypeListId = 2);
+ WHERE cp1.CustAppInfoId = (SELECT CustAppInfoId FROM custappinfo where CustProfileInfoId = ProfileId and CountryListId = CountryId and CountryVisaTypeListId = VisaTypeId);
 
 
 
