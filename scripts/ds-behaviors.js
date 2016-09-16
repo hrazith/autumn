@@ -11,7 +11,7 @@ $(function() {
 		if (i <= numItems) {
 			$("#step" + i).addClass('hide');
 			$("#step" + (i + 1)).removeClass('hide');
-			//percent = (i / numItems) * 100;
+			percent = (i / numItems) * 100;
 
 			console.log(percent);
 			TweenMax.to(".progress .bar", 2, {
@@ -19,6 +19,12 @@ $(function() {
 			});
 			i++;
 		}
+
+		if (i > numItems) {
+			processds();
+		}
+
+
 	});
 
 	$("#back").click(function(event) {
@@ -27,20 +33,19 @@ $(function() {
 			$("#step" + (i - 1)).removeClass('hide');
 			i--;
 		}
-
 		//$(".form-intake:not(.hide)").addClass('test');
-
 	});
 
 	$(".save").click(function(event) {
+		processds();
+	});
+
+	function processds() {
 		queryString = $('form').serialize();
-		//alert(queryString);
 		$.post('processds.php', queryString, function(data) {
 			$('#status').html(data);
 		});
-	});
-
-
+	}
 
 });
 

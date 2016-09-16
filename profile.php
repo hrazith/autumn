@@ -15,6 +15,8 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 	</head>
 	<body>
 		<?php include_once("fragments/header.php"); ?>
@@ -71,3 +73,5 @@
 	</body>
 
 </html>
+<script src="scripts/profile-behaviors.js"></script>
+

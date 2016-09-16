@@ -14,16 +14,25 @@
 	//Call DS160 StoreProc and create an array, $cust[] 
 	//to copy all the stored values. 
 
+	$sql = "CALL procLoadDS160('21','224','2')";
+	$result = mysqli_query($dbCon, $sql);
 
-	while($row = mysqli_fetch_assoc(mysqli_query($dbCon, "CALL procLoadDS160('{$_SESSION['id']}', '{$_SESSION['countryid']}', '{$_SESSION['visaid']}')"))){
-	$percentComplete=floor((count(array_filter($row))/count($row))*100);
-	//create an array with key, value pair corresponding column names and its entry
+
+
+	if ($result) {
+			echo "successfully";
+		} else {
+			mysqli_error($dbCon); 
+		}
+
+while($row = mysqli_fetch_assoc($result)){
+
 		foreach($row as $key => $value) {
 			$cust[$key] = $value;
 		}
 	}
 	mysqli_close($dbCon);
-	echo $percentComplete;
+
 	echo "what the".$cust['First_Name'];
 ?>
 

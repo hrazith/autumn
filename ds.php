@@ -29,7 +29,7 @@
 					<li id="status" class="alert"></li>
 					<li><?php echo date("Y-m-d") ?></li>
 					<li> <a class="save" href="#">Save</a></li>
-					<li> <a class="save" href="profile.php">Close</a></li>
+					<li> <a href="profile.php">Close</a></li>
 				</ul>
 				</form>
 			</div>
@@ -48,6 +48,9 @@
 				<?php include_once("fragments/ds160/step1.php"); ?>
 				<?php include_once("fragments/ds160/step2.php"); ?>
 				<?php include_once("fragments/ds160/step3.php"); ?>
+				<?php include_once("fragments/ds160/step4.php"); ?>
+				<?php include_once("fragments/ds160/step5.php"); ?>
+				<?php include_once("fragments/ds160/step6.php"); ?>
 			</div>
 		</div>
 		<div class="actions-panel">
@@ -60,6 +63,6 @@
 			</div>		
 		</div>
 
-		<script src="scripts/behaviors.js"></script>
+		<script src="scripts/ds-behaviors.js"></script>
 	</body>
 </html>

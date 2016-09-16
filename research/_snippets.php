@@ -27,7 +27,8 @@
 	// setting value in form if it already exists in db
 	value="<?php echo isset($cust['Last_Name']) ? $cust['Last_Name'] : '' ?>"
 
-	
+	//error
+	echo mysqli_error($dbCon);
 
 ?>
 

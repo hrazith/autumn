@@ -9,24 +9,28 @@
  
 	if ($_SESSION['newapp']==1){
 
-		$sql = "INSERT INTO CustAppInfo (
-			CustProfileInfoId,
-			CountryListId,
-			CountryVisaTypeListId,
-			CustAppNumber,
-			CreatedOn
-			) VALUES (
+		$sql = "CALL procCustAppInfoInsert(
 			'{$_SESSION['id']}',
 			'{$_SESSION['countryid']}',
 			'{$_SESSION['visaid']}',
-			'{$_SESSION['appnumber']}',
-			CURRENT_TIMESTAMP
-			)"; 
+			'{$_SESSION['appnumber']}'
+			)";
 
 		if (mysqli_query($dbCon, $sql)) {
-			$_SESSION['appId'] = mysqli_insert_id($dbCon);
-			echo "Record created successfully".$_SESSION['appId'];
+
+			$result = mysqli_query($dbCon, "CALL procGetAppId('{$_SESSION['appnumber']}')");
+			while($row = mysqli_fetch_assoc($result)) {
+		        $_SESSION['appId'] = $row["CustAppInfoId"];
+		    }
+
+			/*$result = mysqli_query($dbCon, "SELECT CustAppInfoId FROM custappinfo WHERE CustAppNumber='{$_SESSION['appnumber']}'");
+			while($row = mysqli_fetch_assoc($result)) {
+	        	$_SESSION['appId'] = $row["CustAppInfoId"];
+	    	}*/
+
+			echo "Record created successfully. Id: ".$_SESSION['appId'];
 		}
+		
 
 
 		$sql2 = "CALL procDS160CustPersonalInfo1Insert(
@@ -55,7 +59,7 @@
 		if (mysqli_query($dbCon, $sql2)) {
 			echo "Record inserted successfully";
 			$_SESSION['newapp']=0;
-		}
+		} else { echo mysqli_error($dbCon); }
 
 // If the user had already initiated an application then 
 // then simply upadate the existing CustProfileInfo1
@@ -67,7 +71,7 @@
 			'{$_REQUEST['fname']}',
 			'{$_REQUEST['lname']}',
 			'{$_REQUEST['nname']}',
-			'{$_REQUEST['onameUsed']}',
+			'{$_REQUEST['onames']}',
 			'{$_REQUEST['oname1']}',
 			'{$_REQUEST['oname2']}',
 			'{$_REQUEST['oname3']}',
@@ -80,7 +84,7 @@
 			'{$_REQUEST['onationality']}',
 			'{$_REQUEST['nid']}',
 			'{$_REQUEST['ssn']}',
-			'{$_REQUEST['taxId']}',
+			'{$_REQUEST['taxid']}',
 			'{$_REQUEST['address']}',
 			'{$_REQUEST['city']}'
 			)";
