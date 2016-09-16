@@ -18,15 +18,35 @@
 
 		if (mysqli_query($dbCon, $sql)) {
 
-			$result = mysqli_query($dbCon, "CALL procGetAppId('{$_SESSION['appnumber']}')");
-			while($row = mysqli_fetch_assoc($result)) {
-		        $_SESSION['appId'] = $row["CustAppInfoId"];
-		    }
+			/*
+				$result = mysqli_query($dbCon, "CALL procGetAppId('{$_SESSION['appnumber']}')");
+					while($row = mysqli_fetch_assoc($result)) {
+			        	$_SESSION['appId'] = $row["CustAppInfoId"];
+			    	}
+		    */
 
-			/*$result = mysqli_query($dbCon, "SELECT CustAppInfoId FROM custappinfo WHERE CustAppNumber='{$_SESSION['appnumber']}'");
-			while($row = mysqli_fetch_assoc($result)) {
-	        	$_SESSION['appId'] = $row["CustAppInfoId"];
-	    	}*/
+			/*
+				// This works but gives MySQL server has gone away 
+					$query = "CALL procGetAppId('{$_SESSION['appnumber']}')";
+					if ($stmt = mysqli_prepare($dbCon, $query)) {
+					    mysqli_stmt_execute($stmt);
+					    mysqli_stmt_bind_result($stmt, $id);
+					    while (mysqli_stmt_fetch($stmt)) {
+					        $_SESSION['appId'] = $id;
+					    }
+					    mysqli_stmt_free_result($stmt);
+					    mysqli_stmt_close($stmt);
+					}
+			*/
+
+			
+				// this works but not a proc
+				$result = mysqli_query($dbCon, "SELECT CustAppInfoId FROM custappinfo WHERE CustAppNumber='{$_SESSION['appnumber']}'");
+				while($row = mysqli_fetch_assoc($result)) {
+		        	$_SESSION['appId'] = $row["CustAppInfoId"];
+		    	}
+
+	    	
 
 			echo "Record created successfully. Id: ".$_SESSION['appId'];
 		}
