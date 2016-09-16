@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `procCustAppInfoInsert`( CustProfileId INT,
                                          CountryListId INT,
@@ -17,4 +18,16 @@ BEGIN
  (CustProfileId,CountryListId,CountryVisaTypeListId,CustAppNumber,Activated,Completed,Submitted,CreatedOn,ModifiedOn);
  
  END$$
+=======
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `procCustAppInfoInsert`(IN `CustProfileId` INT, IN `CountryListId` INT, IN `CountryVisaTypeListId` INT, IN `CustAppNumber` VARCHAR(200))
+BEGIN
+ 
+ INSERT INTO custappinfo
+ (CustProfileInfoId,CountryListId,CountryVisaTypeListId,CustAppNumber)
+ VALUES
+ (CustProfileId,CountryListId,CountryVisaTypeListId,CustAppNumber);
+ 
+ END$$
+>>>>>>> origin/master
 DELIMITER ;
