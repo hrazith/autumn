@@ -15,13 +15,8 @@ $(function() {
 			if (i <= numItems) {
 				$("#step" + i).addClass('hide');
 				$("#step" + (i + 1)).removeClass('hide');
-				percent = (i / numItems) * 100;
-
-				//console.log(percent);
-				TweenMax.to(".progress .bar", 2, {
-					width: percent + "%"
-				});
 				i++;
+				calcpercent();
 			}
 
 			if (i > numItems) {
@@ -33,7 +28,6 @@ $(function() {
 		if (i > 1) {
 			$("#back").removeClass('disabled');
 		}
-		console.log(i);
 
 	});
 
@@ -44,6 +38,7 @@ $(function() {
 				$("#step" + i).addClass('hide');
 				$("#step" + (i - 1)).removeClass('hide');
 				i--;
+				calcpercent();
 			}
 			if (i == 1) {
 				$(this).addClass('disabled');
@@ -60,6 +55,15 @@ $(function() {
 		queryString = $('form').serialize();
 		$.post('processds.php', queryString, function(data) {
 			$('#status').html(data);
+		});
+	}
+
+	function calcpercent() {
+		percent = (i / numItems) * 100;
+
+		//console.log(percent);
+		TweenMax.to(".progress .bar", 2, {
+			width: percent + "%"
 		});
 	}
 
