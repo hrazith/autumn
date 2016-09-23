@@ -6,5 +6,6 @@ UPDATE custappinfo
 SET Completed = 1
 WHERE CustAppInfoId = AppNumberId;
 
+
 END$$
 DELIMITER ;
