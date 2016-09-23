@@ -1,9 +1,4 @@
-﻿<script type="text/javascript">
-	//Jquery for current page URL
-	var CurrentPageURL = $(location).attr("href");
-	
-</script>
-
+﻿
 
 <?php 
 	$country = $_POST["country"];
@@ -31,6 +26,7 @@
 	echo mysqli_error($dbCon);
 
 ?>
+
 
 //**FORM**//
 

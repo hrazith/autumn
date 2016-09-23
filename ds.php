@@ -51,6 +51,7 @@
 				<?php include_once("fragments/ds160/step4.php"); ?>
 				<?php include_once("fragments/ds160/step5.php"); ?>
 				<?php include_once("fragments/ds160/step6.php"); ?>
+				<?php include_once("fragments/ds160/step7.php"); ?>
 			</div>
 		</div>
 		<div class="actions-panel">

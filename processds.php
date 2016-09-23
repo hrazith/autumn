@@ -110,7 +110,7 @@
 			)";
 
 		if (mysqli_query($dbCon, $sql1)) {
-			echo "Record updated successfully";
+			echo "Record updated successfully".$_REQUEST['index'];
 		} else {
 			echo mysqli_error($dbCon);
 		}

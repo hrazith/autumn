@@ -3,6 +3,12 @@ $(function() {
 	var i = 1;
 	var queryString = "";
 
+
+	$(document).click(function() {
+		console.log(i);
+	});
+
+
 	$("#start").click(function(event) {
 		$(".intro, #step1 ").toggleClass('hide');
 		$("#next").removeClass('disabled');
@@ -19,15 +25,16 @@ $(function() {
 				calcpercent();
 			}
 
-			if (i > numItems) {
+			/*if (i > numItems) {
 				processds();
 				location.href = 'ds1.php';
-			}
+			}*/
 		}
 
 		if (i > 1) {
 			$("#back").removeClass('disabled');
 		}
+
 
 	});
 
@@ -53,9 +60,21 @@ $(function() {
 
 	function processds() {
 		queryString = $('form').serialize();
-		$.post('processds.php', queryString, function(data) {
-			$('#status').html(data);
-		});
+		//data: $(this).serialize() + '&NonFormValue=' + NonFormValue,
+
+		if (i <= 6) {
+			queryString += '&index=' + i;
+			$.post('processds.php', queryString, function(data) {
+				$('#status').html(data);
+			});
+		}
+
+		if (i >= 7) {
+			$.post('processds1.php', queryString, function(data) {
+				$('#status').html(data);
+			});
+		}
+
 	}
 
 	function calcpercent() {
@@ -68,14 +87,3 @@ $(function() {
 	}
 
 });
-
-//http://stackoverflow.com/questions/607673/setting-a-php-sessionvar-using-jquery
-
-/*TweenMax.to("#bar", 2, {
-	width: percent + "%",
-	onComplete: endFrame
-});
-
-function endFrame() {
-	alert("Hello");
-	$('#step1 form').submit();*/
