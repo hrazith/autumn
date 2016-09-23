@@ -37,20 +37,10 @@
 		<div class="content-intake">
 			<div class="intake-inner"> 
 				<div class="intro">
-					<h1 data-localize="greeting"> DS-160</h1>
-					<?php 
-						if ($_SESSION['newapp']==1): 
-							include_once("fragments/ds160/instructions-newapp.php"); else: 
-							include_once("fragments/ds160/instructions-existingapp.php"); 
-						endif; 
-					?>
+					<h1 data-localize="greeting"> DS-1</h1>
+					
 				</div>
-				<?php include_once("fragments/ds160/step1.php"); ?>
-				<?php include_once("fragments/ds160/step2.php"); ?>
-				<?php include_once("fragments/ds160/step3.php"); ?>
-				<?php include_once("fragments/ds160/step4.php"); ?>
-				<?php include_once("fragments/ds160/step5.php"); ?>
-				<?php include_once("fragments/ds160/step6.php"); ?>
+				<?php include_once("fragments/ds160/step7.php"); ?>
 			</div>
 		</div>
 		<div class="actions-panel">
@@ -58,11 +48,11 @@
   				<div class="bar"></div>
 			</div>
 			<div class="formnav">
-				<input type="submit" name="submit" class="primary rounded disabled" value="Back" id="back"/>	
-				<input type="submit" name="submit" class="primary rounded disabled" value="Next" id="next"/>
+				<input type="submit" name="submit" class="primary rounded" value="Back" id="back"/>	
+				<input type="submit" name="submit" class="primary rounded" value="Next" id="next"/>
 			</div>		
 		</div>
 
-		<script src="scripts/ds-behaviors.js"></script>
+		<script src="scripts/ds1-behaviors.js"></script>
 	</body>
 </html>

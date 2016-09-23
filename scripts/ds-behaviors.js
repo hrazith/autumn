@@ -5,33 +5,49 @@ $(function() {
 
 	$("#start").click(function(event) {
 		$(".intro, #step1 ").toggleClass('hide');
+		$("#next").removeClass('disabled');
 	});
 
 	$("#next").click(function(event) {
-		if (i <= numItems) {
-			$("#step" + i).addClass('hide');
-			$("#step" + (i + 1)).removeClass('hide');
-			percent = (i / numItems) * 100;
 
-			console.log(percent);
-			TweenMax.to(".progress .bar", 2, {
-				width: percent + "%"
-			});
-			i++;
+
+		if (!$(this).hasClass("disabled")) {
+			if (i <= numItems) {
+				$("#step" + i).addClass('hide');
+				$("#step" + (i + 1)).removeClass('hide');
+				percent = (i / numItems) * 100;
+
+				//console.log(percent);
+				TweenMax.to(".progress .bar", 2, {
+					width: percent + "%"
+				});
+				i++;
+			}
+
+			if (i > numItems) {
+				processds();
+				location.href = 'ds1.php';
+			}
 		}
 
-		if (i > numItems) {
-			processds();
+		if (i > 1) {
+			$("#back").removeClass('disabled');
 		}
-
+		console.log(i);
 
 	});
 
 	$("#back").click(function(event) {
-		if (i > 1) {
-			$("#step" + i).addClass('hide');
-			$("#step" + (i - 1)).removeClass('hide');
-			i--;
+		console.log(i);
+		if (!$(this).hasClass("disabled")) {
+			if (i > 1) {
+				$("#step" + i).addClass('hide');
+				$("#step" + (i - 1)).removeClass('hide');
+				i--;
+			}
+			if (i == 1) {
+				$(this).addClass('disabled');
+			}
 		}
 		//$(".form-intake:not(.hide)").addClass('test');
 	});

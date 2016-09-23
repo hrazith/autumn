@@ -36,15 +36,22 @@
     }*/
 
 
-    $sql = "CALL procCalculateAppPercentageCompletion(
-			'{$_SESSION['id']}',
-			'{$_SESSION['countryid']}',
-			'{$_SESSION['visaid']}'
+    $sql = "CALL procGetProfileInfoWithAppPercentageCompleted(
+			'{$_SESSION['id']}'
 			)";
-	$result = mysqli_query($dbCon, $sql);
-	while($row = mysqli_fetch_assoc($result)) {
-			$percentComplete=$row["ApplicationPercentageCompletion"];;
+	if (mysqli_query($dbCon, $sql)) {
+			echo "Record updated successfully";
+		} else {
+			echo mysqli_error($dbCon);
 		}
+
+
+	/*$result = mysqli_query($dbCon, $sql);
+	while($row = mysqli_fetch_assoc($result)) {
+			$percentComplete=$row["AppPercentageCompleted"];;
+		}
+
+	echo $percentComplete;*/
 		
 ?>
 

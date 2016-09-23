@@ -114,15 +114,31 @@
 		} else {
 			echo mysqli_error($dbCon);
 		}
-		
 
-		$sql2 = "UPDATE CustAppInfo SET
-			ModifiedOn = CURRENT_TIMESTAMP
-			WHERE
-			CustAppInfoId='{$_SESSION['appId']}'";
+
+		/*
+		// Always timestamps NULL
+		$sql2 = "CALL procGetAppId('{$_SESSION['appId']}')";
 		if (mysqli_query($dbCon, $sql2)) {
 			echo " and timestamped!";
 		}
+		*/
+
+			
+			/*$sql2 = "UPDATE CustAppInfo SET
+				ModifiedOn = CURRENT_TIMESTAMP
+				WHERE
+				CustAppInfoId='{$_SESSION['appId']}'";
+			if (mysqli_query($dbCon, $sql2)) {
+				echo " and timestamped!";
+			}*/
+
+			$sql2 = "CALL procCustAppInfoModifiedOnUpdate(
+				'{$_SESSION['appId']}')";
+			if (mysqli_query($dbCon, $sql2)) {
+				echo " and timestamped!";
+			}
+		
 
 	}
 
