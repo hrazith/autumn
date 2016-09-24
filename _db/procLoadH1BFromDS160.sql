@@ -159,7 +159,7 @@ SELECT DS.FirstName,
                 LEFT JOIN custpersonalinfo3 c3 ON c1.CustAppInfoId = c3.CustAppInfoId
                 LEFT JOIN custprofileinfo cp ON cp.UserName = UserName
                WHERE c1.CustAppInfoId IN (SELECT CustAppInfoId FROM custappinfo WHERE CountryListId IN (SELECT CountryListId FROM countrylist WHERE CountryName = 'United States') AND CustProfileInfoId IN (SELECT CustProfileInfoId FROM custprofileinfo WHERE UserName = UserName)))DS
-                LEFT JOIN personaldetail p1 ON DS.CustProfileInfoId = p1.CustProfileInfoId
+                LEFT JOIN personaldetail1 p1 ON DS.CustProfileInfoId = p1.CustProfileInfoId
                 LEFT JOIN personaldetail2 p2 ON p1.CustProfileInfoId = p2.CustProfileInfoId
                 LEFT JOIN ushomeaddress ha ON p1.CustProfileInfoId = ha.CustProfileInfoId
                 LEFT JOIN overseaspermanentaddress oa ON p1.CustProfileInfoId = oa.CustProfileInfoId
