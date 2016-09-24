@@ -3,7 +3,7 @@ CREATE TABLE `visainformation1` (
   `CustProfileInfoId` int(11) DEFAULT NULL,
   `EverEnteredUS` varchar(50) DEFAULT NULL,
   `DateofLastEntryUS` varchar(100) DEFAULT NULL,
-  `I94Number` int(11) DEFAULT NULL,
+  `I94Number` varchar(50) DEFAULT NULL,
   `CurrentUSImmigrationStatus` varchar(100) DEFAULT NULL,
   `LastEntryUSCity` varchar(500) DEFAULT NULL,
   `LastEntryUSState` varchar(500) DEFAULT NULL,

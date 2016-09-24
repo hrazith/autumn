@@ -12,7 +12,7 @@ CREATE TABLE `employment1` (
   `Country` varchar(500) DEFAULT NULL,
   `EmployerIsUniversityOrNonProfit` varchar(50) DEFAULT NULL,
   `TypeOfBusiness` varchar(500) DEFAULT NULL,
-  `HoursPerWeek` int(11) DEFAULT NULL,
+  `HoursPerWeek` varchar(50) DEFAULT NULL,
   `IsPositionPartTime` varchar(50) DEFAULT NULL,
   `JobTitle` varchar(200) DEFAULT NULL,
   `CurrentAnnualBaseSalary` varchar(100) DEFAULT NULL,

@@ -7,7 +7,7 @@ CREATE TABLE `visainformation2` (
   `IfinF1_AppliedOTP` varchar(50) DEFAULT NULL,
   `I765Approved_Pending` varchar(50) DEFAULT NULL,
   `I765ReceiptNumber` varchar(100) DEFAULT NULL,
-  `IfI765Approved_NoOfDaysUnemployedAfterEAD` int(11) DEFAULT NULL,
+  `IfI765Approved_NoOfDaysUnemployedAfterEAD` varchar(50) DEFAULT NULL,
   `J1orJ2Visa` varchar(50) DEFAULT NULL,
   `TwoYrHomeResidencyRequirement` varchar(50) DEFAULT NULL,
   `J1orJ2SubmittedApplicationForWaiver` varchar(50) DEFAULT NULL,
