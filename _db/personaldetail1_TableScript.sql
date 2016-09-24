@@ -1,0 +1,23 @@
+CREATE TABLE `personaldetail1` (
+  `PersonalDetailId` int(11) NOT NULL auto_increment primary key,
+  `CustProfileInfoId` int(11) DEFAULT NULL,
+  `FirstName` varchar(500) DEFAULT NULL,
+  `MiddleName` varchar(500) DEFAULT NULL,
+  `LastName` varchar(500) DEFAULT NULL,
+  `MaidenName` varchar(500) DEFAULT NULL,
+  `AliasFirstName` varchar(500) DEFAULT NULL,
+  `AliasLastName` varchar(500) DEFAULT NULL,
+  `OtherName1` varchar(500) DEFAULT NULL,
+  `OtherName2` varchar(500) DEFAULT NULL,
+  `OtherName3` varchar(500) DEFAULT NULL,
+  `EmailAddress` varchar(500) DEFAULT NULL,
+  `WorkPhone` varchar(50) DEFAULT NULL,
+  `HomePhone` varchar(50) DEFAULT NULL,
+  `MobilePhone` varchar(50) DEFAULT NULL,
+  `Gender` varchar(50) DEFAULT NULL,
+  `DateofBirth` varchar(100) DEFAULT NULL,
+  `CityofBirth` varchar(500) DEFAULT NULL,
+  `StateofBirth` varchar(500) DEFAULT NULL,
+  `CountryofBirth` varchar(500) DEFAULT NULL,
+   Foreign key (CustProfileInfoId) references CustProfileInfo(CustProfileInfoId)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

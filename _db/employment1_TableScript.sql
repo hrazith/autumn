@@ -1,0 +1,22 @@
+CREATE TABLE `employment1` (
+  `EmploymentId` int(11) NOT NULL auto_increment primary key,
+  `CustProfileInfoId` int(11) DEFAULT NULL,
+  `EmploymentType` varchar(100) DEFAULT NULL,
+  `EmploymentDateFrom` varchar(100) DEFAULT NULL,
+  `EmploymentDateTo` varchar(100) DEFAULT NULL,
+  `StreetAddress` varchar(500) DEFAULT NULL,
+  `Address2` varchar(500) DEFAULT NULL,
+  `City` varchar(500) DEFAULT NULL,
+  `StateProvinceRegion` varchar(500) DEFAULT NULL,
+  `ZipCode` varchar(50) DEFAULT NULL,
+  `Country` varchar(500) DEFAULT NULL,
+  `EmployerIsUniversityOrNonProfit` varchar(50) DEFAULT NULL,
+  `TypeOfBusiness` varchar(500) DEFAULT NULL,
+  `HoursPerWeek` int(11) DEFAULT NULL,
+  `IsPositionPartTime` varchar(50) DEFAULT NULL,
+  `JobTitle` varchar(200) DEFAULT NULL,
+  `CurrentAnnualBaseSalary` varchar(100) DEFAULT NULL,
+  `DetailJobDuties` varchar(8000) DEFAULT NULL,
+  `TechnologiesUsed` varchar(8000) DEFAULT NULL,
+  Foreign key (CustProfileInfoId) references CustProfileInfo(CustProfileInfoId)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
