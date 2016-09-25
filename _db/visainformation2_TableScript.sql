@@ -1,6 +1,6 @@
 CREATE TABLE `visainformation2` (
   `VisaInformationId` int(11) NOT NULL auto_increment primary key,
-  `CustProfileInfoId` int(11) DEFAULT NULL,
+  `CustAppInfoId` int(11) DEFAULT NULL,
    `F1Status_CPTTraining` varchar(50) DEFAULT NULL,
   `CPTWithGraduateDegree` varchar(50) DEFAULT NULL,
   `StartedCPTAfterDegreeProgram` varchar(50) DEFAULT NULL,
@@ -20,5 +20,5 @@ CREATE TABLE `visainformation2` (
   `NotStartedEmploymentSelectReason` varchar(500) DEFAULT NULL,
   `HOrLPetitionDenied` varchar(50) DEFAULT NULL,
   `IfYesEnterReason` varchar(8000) DEFAULT NULL,
-   Foreign key (CustProfileInfoId) references CustProfileInfo(CustProfileInfoId)
+   Foreign key (CustAppInfoId) references CustAppInfo(CustAppInfoId)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -1,6 +1,6 @@
 CREATE TABLE `visainformation1` (
   `VisaInformationId` int(11) NOT NULL auto_increment primary key,
-  `CustProfileInfoId` int(11) DEFAULT NULL,
+  `CustAppInfoId` int(11) DEFAULT NULL,
   `EverEnteredUS` varchar(50) DEFAULT NULL,
   `DateofLastEntryUS` varchar(100) DEFAULT NULL,
   `I94Number` varchar(50) DEFAULT NULL,
@@ -19,5 +19,5 @@ CREATE TABLE `visainformation1` (
   `I140ReceiptCategoryPriorityDate` varchar(1000) DEFAULT NULL,
   `EverAppliedGreenCardOrPermanentResidencyByYou_Family` varchar(50) DEFAULT NULL,
   `DatePlaceOutcomeOfGreenCardOrPermanentResidency` varchar(1000) DEFAULT NULL,
-   Foreign key (CustProfileInfoId) references CustProfileInfo(CustProfileInfoId)
+   Foreign key (CustAppInfoId) references CustAppInfo(CustAppInfoId)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

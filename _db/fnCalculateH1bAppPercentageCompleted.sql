@@ -1,5 +1,5 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` FUNCTION `fnCalculateH1bAppPercentageCompleted`(ProfileId INT) RETURNS varchar(255) CHARSET latin1
+CREATE DEFINER=`root`@`localhost` FUNCTION `fnCalculateH1bAppPercentageCompleted`(AppId INT) RETURNS varchar(255) CHARSET latin1
 BEGIN
 
 SET @TotalColumnCount = (SELECT COUNT(*) ColumnCount 
@@ -94,7 +94,7 @@ SET @personaldetail1 = ( SELECT IF(FirstName = '',1,0) + IF(FirstName = NULL,1,0
                                 IF(StateofBirth = '',1,0) + IF(StateofBirth = NULL,1,0) + IF(StateofBirth = 'NULL',1,0) +
                                 IF(CountryofBirth = '',1,0) + IF(CountryofBirth = NULL,1,0) + IF(CountryofBirth = 'NULL',1,0)
                          FROM personaldetail1
-                         WHERE CustProfileInfoId = ProfileId);
+                         WHERE CustAppInfoId = AppId);
                         
                         
 SET @personaldetail2 = ( SELECT IF(Nationality = '',1,0) + IF(Nationality = NULL,1,0) + IF(Nationality = 'NULL',1,0) +
@@ -108,7 +108,7 @@ SET @personaldetail2 = ( SELECT IF(Nationality = '',1,0) + IF(Nationality = NULL
                                 IF(PassportIssuedCountry = '',1,0) + IF(PassportIssuedCountry = NULL,1,0) + IF(PassportIssuedCountry = 'NULL',1,0) +
                                 IF(BlankPagesInPassport = '',1,0) + IF(BlankPagesInPassport = NULL,1,0) + IF(BlankPagesInPassport = 'NULL',1,0) 
                          FROM personaldetail2
-                         WHERE CustProfileInfoId = ProfileId);
+                         WHERE CustAppInfoId = AppId);
                         
                         
 SET @ushomeaddress = ( SELECT IF(HaveUSHomeAddress = '',1,0) + IF(HaveUSHomeAddress = NULL,1,0) + IF(HaveUSHomeAddress = 'NULL',1,0) + 
@@ -130,7 +130,7 @@ SET @ushomeaddress = ( SELECT IF(HaveUSHomeAddress = '',1,0) + IF(HaveUSHomeAddr
             IF(PlanOfChangingPlaceOfResidenceInNext4Months = '',1,0) + IF(PlanOfChangingPlaceOfResidenceInNext4Months = NULL,1,0) + IF(PlanOfChangingPlaceOfResidenceInNext4Months = 'NULL',1,0) + 
                               IF(IfYesMovingDateAndNewAddress = '',1,0) + IF(IfYesMovingDateAndNewAddress = NULL,1,0) + IF(IfYesMovingDateAndNewAddress = 'NULL',1,0) 
                        FROM ushomeaddress
-                       WHERE CustProfileInfoId = ProfileId);
+                       WHERE CustAppInfoId = AppId);
                        
                        
 SET @education = ( SELECT IF(InstitutionFullName = '',1,0) + IF(InstitutionFullName = NULL,1,0) + IF(InstitutionFullName = 'NULL',1,0) +
@@ -142,7 +142,7 @@ SET @education = ( SELECT IF(InstitutionFullName = '',1,0) + IF(InstitutionFullN
                           IF(DegreeReceived = '',1,0) + IF(DegreeReceived = NULL,1,0) + IF(DegreeReceived = 'NULL',1,0) +
                           IF(Notes = '',1,0) + IF(Notes = NULL,1,0) + IF(Notes = 'NULL',1,0) 
                    FROM education
-                   WHERE CustProfileInfoId = ProfileId);
+                   WHERE CustAppInfoId = AppId);
                    
                    
 SET @overseaspermanentaddress = ( SELECT IF(OverseasPermanentAddressDateFrom = '',1,0) + IF(OverseasPermanentAddressDateFrom = NULL,1,0) + IF(OverseasPermanentAddressDateFrom = 'NULL',1,0) +
@@ -155,14 +155,14 @@ SET @overseaspermanentaddress = ( SELECT IF(OverseasPermanentAddressDateFrom = '
                                          IF(Country = '',1,0) + IF(Country = NULL,1,0) + IF(Country = 'NULL',1,0) +
              IF(PlanOfChangingPlaceOfResidenceInNext4Months = '',1,0) + IF(PlanOfChangingPlaceOfResidenceInNext4Months = NULL,1,0) + IF(PlanOfChangingPlaceOfResidenceInNext4Months = 'NULL',1,0) 
                                   FROM overseaspermanentaddress
-                                  WHERE CustProfileInfoId = ProfileId);
+                                  WHERE CustAppInfoId = AppId);
                         
 SET @internationaltravel = ( SELECT IF(PossibilityOfInternationTravelIn6Months = '',1,0) + IF(PossibilityOfInternationTravelIn6Months = NULL,1,0) + IF(PossibilityOfInternationTravelIn6Months = 'NULL',1,0) + 
                                     IF(DateofIntendedDeparture = '',1,0) + IF(DateofIntendedDeparture = NULL,1,0) + IF(DateofIntendedDeparture = 'NULL',1,0) +
                                     IF(ExpectedLengthOfTrip = '',1,0) + IF(ExpectedLengthOfTrip = NULL,1,0) + IF(ExpectedLengthOfTrip = 'NULL',1,0) +
                                     IF(PurposeOfTripIncludingTravelersName = '',1,0) + IF(PurposeOfTripIncludingTravelersName = NULL,1,0) + IF(PurposeOfTripIncludingTravelersName = 'NULL',1,0) 
                              FROM internationtravel
-                             WHERE CustProfileInfoId = ProfileId);
+                             WHERE CustAppInfoId = AppId);
                              
                              
 SET @employment1 = ( SELECT IF(EmploymentType = '',1,0) + IF(EmploymentType = NULL,1,0) + IF(EmploymentType = 'NULL',1,0) +
@@ -183,7 +183,7 @@ SET @employment1 = ( SELECT IF(EmploymentType = '',1,0) + IF(EmploymentType = NU
                             IF(DetailJobDuties = '',1,0) + IF(DetailJobDuties = NULL,1,0) + IF(DetailJobDuties = 'NULL',1,0) +
                             IF(TechnologiesUsed = '',1,0) + IF(TechnologiesUsed = NULL,1,0) + IF(TechnologiesUsed = 'NULL',1,0) 
                      FROM employment1
-                     WHERE CustProfileInfoId = ProfileId);
+                     WHERE CustAppInfoId = AppId);
                      
                      
 SET @employment2 = ( SELECT IF(SupervisorName = '',1,0) + IF(SupervisorName = NULL,1,0) + IF(SupervisorName = 'NULL',1,0) +
@@ -193,7 +193,7 @@ SET @employment2 = ( SELECT IF(SupervisorName = '',1,0) + IF(SupervisorName = NU
                             IF(WorkingOutsideTheUS = '',1,0) + IF(WorkingOutsideTheUS = NULL,1,0) + IF(WorkingOutsideTheUS = 'NULL',1,0) +
                        IF(IfWorkingOutsideDoesItInvolveSupervision = '',1,0) + IF(IfWorkingOutsideDoesItInvolveSupervision = NULL,1,0) + IF(IfWorkingOutsideDoesItInvolveSupervision = 'NULL',1,0) 
                      FROM employment2
-                     WHERE CustProfileInfoId = ProfileId);
+                     WHERE CustAppInfoId = AppId);
                      
                      
 SET @visainformation1 = ( SELECT IF(EverEnteredUS = '',1,0) + IF(EverEnteredUS = NULL,1,0) + IF(EverEnteredUS = 'NULL',1,0) +
@@ -215,7 +215,7 @@ SET @visainformation1 = ( SELECT IF(EverEnteredUS = '',1,0) + IF(EverEnteredUS =
                                  IF(EverAppliedGreenCardOrPermanentResidencyByYou_Family = '',1,0) + IF(EverAppliedGreenCardOrPermanentResidencyByYou_Family = NULL,1,0) + IF(EverAppliedGreenCardOrPermanentResidencyByYou_Family = 'NULL',1,0) +
                                  IF(DatePlaceOutcomeOfGreenCardOrPermanentResidency = '',1,0) + IF(DatePlaceOutcomeOfGreenCardOrPermanentResidency = NULL,1,0) + IF(DatePlaceOutcomeOfGreenCardOrPermanentResidency = 'NULL',1,0)
                           FROM visainformation1
-                          WHERE CustProfileInfoId = ProfileId);
+                          WHERE CustAppInfoId = AppId);
                         
                         
 SET @visainformation2 = ( SELECT IF(F1Status_CPTTraining = '',1,0) + IF(F1Status_CPTTraining = NULL,1,0) + IF(F1Status_CPTTraining = 'NULL',1,0) +
@@ -238,7 +238,7 @@ SET @visainformation2 = ( SELECT IF(F1Status_CPTTraining = '',1,0) + IF(F1Status
                                  IF(HOrLPetitionDenied = '',1,0) + IF(HOrLPetitionDenied = NULL,1,0) + IF(HOrLPetitionDenied = 'NULL',1,0) +
                                  IF(IfYesEnterReason = '',1,0) + IF(IfYesEnterReason = NULL,1,0) + IF(IfYesEnterReason = 'NULL',1,0)
                           FROM visainformation2
-                          WHERE CustProfileInfoId = ProfileId);
+                          WHERE CustAppInfoId = AppId);
                         
                         
 SET @visaapplication = ( SELECT IF(ResidingOutsideUS = '',1,0) + IF(ResidingOutsideUS = NULL,1,0) + IF(ResidingOutsideUS = 'NULL',1,0) +
@@ -246,7 +246,7 @@ SET @visaapplication = ( SELECT IF(ResidingOutsideUS = '',1,0) + IF(ResidingOuts
                                IF(AppliedNonImmigrantUSVisa = '',1,0) + IF(AppliedNonImmigrantUSVisa = NULL,1,0) + IF(AppliedNonImmigrantUSVisa = 'NULL',1,0) +
                                IF(VisaCancelledDeniedRejected = '',1,0) + IF(VisaCancelledDeniedRejected = NULL,1,0) + IF(VisaCancelledDeniedRejected = 'NULL',1,0)
                         FROM visaapplication
-                        WHERE CustProfileInfoId = ProfileId);
+                        WHERE CustAppInfoId = AppId);
                       
                       
 SET @personaldetail1 = (select COALESCE(@personaldetail1,@personaldetail1BaseCount));

@@ -1,6 +1,6 @@
 CREATE TABLE `personaldetail1` (
   `PersonalDetailId` int(11) NOT NULL auto_increment primary key,
-  `CustProfileInfoId` int(11) DEFAULT NULL,
+  `CustAppInfoId` int(11) DEFAULT NULL,
   `FirstName` varchar(500) DEFAULT NULL,
   `MiddleName` varchar(500) DEFAULT NULL,
   `LastName` varchar(500) DEFAULT NULL,
@@ -19,5 +19,5 @@ CREATE TABLE `personaldetail1` (
   `CityofBirth` varchar(500) DEFAULT NULL,
   `StateofBirth` varchar(500) DEFAULT NULL,
   `CountryofBirth` varchar(500) DEFAULT NULL,
-   Foreign key (CustProfileInfoId) references CustProfileInfo(CustProfileInfoId)
+   Foreign key (CustAppInfoId) references CustAppInfo(CustAppInfoId)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

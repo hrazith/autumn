@@ -66,10 +66,6 @@ SELECT DS.FirstName,
        e.MajorOrFieldOfStudy,
        e.DegreeReceived,
        e.Notes,
-	   i.PossibilityOfInternationTravelIn6Months,
-	   i.DateofIntendedDeparture,
-	   i.ExpectedLengthOfTrip,
-	   i.PurposeOfTripIncludingTravelersName,
        e1.EmploymentType,
        e1.EmploymentDateFrom,
        e1.EmploymentDateTo,
@@ -156,26 +152,29 @@ SELECT DS.FirstName,
                        c2.City_Issued_Passport PassportIssuedCity,
                        c3.State_Province_Issued_Passport PassportIssuedState,
                        c3.Country_Issued_Passport PassportIssuedCountry,
-                       cp.CustProfileInfoId,
+                       A.CustAppInfoId,
                        cp.UserName
                 FROM custpersonalinfo1 c1 
                 LEFT JOIN custpersonalinfo2 c2 ON c1.CustAppInfoId = c2.CustAppInfoId
                 LEFT JOIN custpersonalinfo3 c3 ON c1.CustAppInfoId = c3.CustAppInfoId
+                LEFT JOIN (SELECT cp.CustProfileInfoId,MAX(app.CustAppInfoId)CustAppInfoId FROM custappinfo app 
+                           inner join custprofileinfo cp ON app.CustProfileInfoId = cp.CustProfileInfoId
+                           WHERE cp.UserName = UserName
+                           GROUP BY cp.CustProfileInfoId)A ON c1.CustAppInfoId = A.CustAppInfoId
                 LEFT JOIN custprofileinfo cp ON cp.UserName = UserName
                WHERE c1.CustAppInfoId IN (SELECT CustAppInfoId FROM custappinfo WHERE CountryListId IN (SELECT CountryListId FROM countrylist WHERE CountryName = 'United States') AND CustProfileInfoId IN (SELECT CustProfileInfoId FROM custprofileinfo WHERE UserName = UserName)))DS
-                LEFT JOIN personaldetail1 p1 ON DS.CustProfileInfoId = p1.CustProfileInfoId
-                LEFT JOIN personaldetail2 p2 ON p1.CustProfileInfoId = p2.CustProfileInfoId
-                LEFT JOIN ushomeaddress ha ON p1.CustProfileInfoId = ha.CustProfileInfoId
-                LEFT JOIN overseaspermanentaddress oa ON p1.CustProfileInfoId = oa.CustProfileInfoId
-                LEFT JOIN education e ON p1.CustProfileInfoId = e.CustProfileInfoId
-                LEFT JOIN employment1 e1 ON p1.CustProfileInfoId = e1.CustProfileInfoId
-                LEFT JOIN employment2 e2 ON p1.CustProfileInfoId = e2.CustProfileInfoId
-                LEFT JOIN internationtravel i ON p1.CustProfileInfoId = i.CustProfileInfoId
-                LEFT JOIN visainformation1 v1 ON p1.CustProfileInfoId = v1.CustProfileInfoId
-                LEFT JOIN visainformation2 v2 ON p1.CustProfileInfoId = v2.CustProfileInfoId
-                LEFT JOIN visaapplication va ON p1.CustProfileInfoId = va.CustProfileInfoId
+                LEFT JOIN personaldetail1 p1 ON DS.CustAppInfoId = p1.CustAppInfoId
+                LEFT JOIN personaldetail2 p2 ON p1.CustAppInfoId = p2.CustAppInfoId
+                LEFT JOIN ushomeaddress ha ON p1.CustAppInfoId = ha.CustAppInfoId
+                LEFT JOIN overseaspermanentaddress oa ON p1.CustAppInfoId = oa.CustAppInfoId
+                LEFT JOIN education e ON p1.CustAppInfoId = e.CustAppInfoId
+                LEFT JOIN employment1 e1 ON p1.CustAppInfoId = e1.CustAppInfoId
+                LEFT JOIN employment2 e2 ON p1.CustAppInfoId = e2.CustAppInfoId
+                LEFT JOIN internationtravel i ON p1.CustAppInfoId = i.CustAppInfoId
+                LEFT JOIN visainformation1 v1 ON p1.CustAppInfoId = v1.CustAppInfoId
+                LEFT JOIN visainformation2 v2 ON p1.CustAppInfoId = v2.CustAppInfoId
+                LEFT JOIN visaapplication va ON p1.CustAppInfoId = va.CustAppInfoId
                 WHERE DS.UserName = UserName;
-
 
 END$$
 DELIMITER ;

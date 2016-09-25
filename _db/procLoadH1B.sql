@@ -1,9 +1,9 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `procLoadH1B`(IN `UserName` VARCHAR(200))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `procLoadH1B`(IN `UserName` VARCHAR(200), IN `AppId` INT)
 BEGIN
 
 
-            SELECT p1.FirstName,
+                       SELECT p1.FirstName,
                    p1.MiddleName,
                    p1.LastName,
                    p1.MaidenName,
@@ -66,10 +66,6 @@ BEGIN
                    e.MajorOrFieldOfStudy,
                    e.DegreeReceived,
                    e.Notes,
-				   i.PossibilityOfInternationTravelIn6Months,
-				   i.DateofIntendedDeparture,
-				   i.ExpectedLengthOfTrip,
-				   i.PurposeOfTripIncludingTravelersName,
                    e1.EmploymentType,
                    e1.EmploymentDateFrom,
                    e1.EmploymentDateTo,
@@ -135,18 +131,20 @@ BEGIN
                    va.AppliedNonImmigrantUSVisa,
                    va.VisaCancelledDeniedRejected
                 FROM personaldetail1 p1 
-                LEFT JOIN personaldetail2 p2 ON p1.CustProfileInfoId = p2.CustProfileInfoId
-                LEFT JOIN ushomeaddress ha ON p1.CustProfileInfoId = ha.CustProfileInfoId
-                LEFT JOIN overseaspermanentaddress oa ON p1.CustProfileInfoId = oa.CustProfileInfoId
-                LEFT JOIN education e ON p1.CustProfileInfoId = e.CustProfileInfoId
-                LEFT JOIN employment1 e1 ON p1.CustProfileInfoId = e1.CustProfileInfoId
-                LEFT JOIN employment2 e2 ON p1.CustProfileInfoId = e2.CustProfileInfoId
-                LEFT JOIN internationtravel i ON p1.CustProfileInfoId = i.CustProfileInfoId
-                LEFT JOIN visainformation1 v1 ON p1.CustProfileInfoId = v1.CustProfileInfoId
-                LEFT JOIN visainformation2 v2 ON p1.CustProfileInfoId = v2.CustProfileInfoId
-                LEFT JOIN visaapplication va ON p1.CustProfileInfoId = va.CustProfileInfoId
-                LEFT JOIN custprofileinfo cp ON p1.CustProfileInfoId = cp.CustProfileInfoId
-                WHERE cp.UserName = UserName;
+                LEFT JOIN personaldetail2 p2 ON p1.CustAppInfoId = p2.CustAppInfoId
+                LEFT JOIN ushomeaddress ha ON p1.CustAppInfoId = ha.CustAppInfoId
+                LEFT JOIN overseaspermanentaddress oa ON p1.CustAppInfoId = oa.CustAppInfoId
+                LEFT JOIN education e ON p1.CustAppInfoId = e.CustAppInfoId
+                LEFT JOIN employment1 e1 ON p1.CustAppInfoId = e1.CustAppInfoId
+                LEFT JOIN employment2 e2 ON p1.CustAppInfoId = e2.CustAppInfoId
+                LEFT JOIN internationtravel i ON p1.CustAppInfoId = i.CustAppInfoId
+                LEFT JOIN visainformation1 v1 ON p1.CustAppInfoId = v1.CustAppInfoId
+                LEFT JOIN visainformation2 v2 ON p1.CustAppInfoId = v2.CustAppInfoId
+                LEFT JOIN visaapplication va ON p1.CustAppInfoId = va.CustAppInfoId
+                LEFT JOIN custappinfo app ON p1.CustAppInfoId = app.CustAppInfoId
+                LEFT JOIN custprofileinfo cp ON app.CustProfileInfoId = cp.CustProfileInfoId
+                WHERE p1.CustAppInfoId = AppId 
+                      AND cp.UserName = UserName;
 
 
 END$$

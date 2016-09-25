@@ -1,6 +1,6 @@
 CREATE TABLE `employment1` (
   `EmploymentId` int(11) NOT NULL auto_increment primary key,
-  `CustProfileInfoId` int(11) DEFAULT NULL,
+  `CustAppInfoId` int(11) DEFAULT NULL,
   `EmploymentType` varchar(100) DEFAULT NULL,
   `EmploymentDateFrom` varchar(100) DEFAULT NULL,
   `EmploymentDateTo` varchar(100) DEFAULT NULL,
@@ -18,5 +18,5 @@ CREATE TABLE `employment1` (
   `CurrentAnnualBaseSalary` varchar(100) DEFAULT NULL,
   `DetailJobDuties` varchar(8000) DEFAULT NULL,
   `TechnologiesUsed` varchar(8000) DEFAULT NULL,
-  Foreign key (CustProfileInfoId) references CustProfileInfo(CustProfileInfoId)
+  Foreign key (CustAppInfoId) references CustAppInfo(CustAppInfoId)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
