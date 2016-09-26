@@ -6,6 +6,11 @@ $(function() {
 
 	$(document).click(function() {
 		console.log(i);
+		if (i == 6) {
+			$("#next").toggleClass('hide');
+			$("#sav").toggleClass('hide');
+
+		}
 	});
 
 
@@ -55,6 +60,7 @@ $(function() {
 	});
 
 	$(".save").click(function(event) {
+		event.preventDefault();
 		processds();
 	});
 

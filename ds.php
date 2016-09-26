@@ -61,6 +61,7 @@
 			<div class="formnav">
 				<input type="submit" name="submit" class="primary rounded disabled" value="Back" id="back"/>	
 				<input type="submit" name="submit" class="primary rounded disabled" value="Next" id="next"/>
+				<input type="submit" name="submit" class="primary rounded save hide" value="Save" id="sav"/>
 			</div>		
 		</div>
 
