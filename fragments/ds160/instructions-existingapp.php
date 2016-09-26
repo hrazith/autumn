@@ -24,7 +24,11 @@
 	}
 	mysqli_close($dbCon);
 	echo $percentComplete;
-	echo "what the".$cust['First_Name'];
+	echo "what the".$cust['State_Province'];
+
+
+
+
 ?>
 
 <!-- send the claculated pecentage to jquery, stored in a variable -->
