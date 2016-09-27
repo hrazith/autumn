@@ -265,11 +265,11 @@ SET @employment1 = (select COALESCE(@employment1,@employment1BaseCount));
 
 SET @employment2 = (select COALESCE(@employment2,@employment2BaseCount));
 
-SET @visainformation1 = (select COALESCE(@visainformation1,@visainformation1InfoBaseCount));
+SET @visainformation1 = (select COALESCE(@visainformation1,@visainformation1BaseCount));
 
 SET @visainformation2 = (select COALESCE(@visainformation2,@visainformation2BaseCount));
 
-SET @visaapplication = (select COALESCE(@visaapplication,@visaapplicationInfoBaseCount));
+SET @visaapplication = (select COALESCE(@visaapplication,@visaapplicationBaseCount));
                         
 
 SET @EffectiveColumnFilled = (SELECT @TotalColumnCount - (@personaldetail1 + @personaldetail2 + @ushomeaddress + @education + @overseaspermanentaddress + @internationaltravel + @employment1 + 										 @employment2 + @visainformation1 + @visainformation2 + @visaapplication));
