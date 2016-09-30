@@ -58,7 +58,7 @@
 			'{$_REQUEST['fname']}',
 			'{$_REQUEST['lname']}',
 			'{$_REQUEST['nname']}',
-			'{$_REQUEST['onameUsed']}',
+			'{$_REQUEST['onames']}',
 			'{$_REQUEST['oname1']}',
 			'{$_REQUEST['oname2']}',
 			'{$_REQUEST['oname3']}',

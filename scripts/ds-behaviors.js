@@ -65,28 +65,11 @@ $(function() {
 	});
 
 	function processds() {
-		//queryString = $('form').serialize();
 		queryString = $('form').serialize() + '&index=' + i;
-
-
-		if (i <= 6) {
-			queryString += '&index=' + i;
-			$.post('processds.php', queryString, function(data) {
-				$('#status').html(data);
-			});
-		}
-
-		if (i >= 7) {
-			$.post('processds1.php', queryString, function(data) {
-				$('#status').html(data);
-			});
-		}
-		if (i >= 10) {
-			$.post('processds2.php', queryString, function(data) {
-				$('#status').html(data);
-			});
-		}
-
+		//alert(queryString);
+		$.post('processds.php', queryString, function(data) {
+			$('#status').html(data);
+		});
 	}
 
 	function calcpercent() {

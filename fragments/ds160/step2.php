@@ -18,8 +18,7 @@
 					</li>
 					<li>
 						<label for="nname">Full name in native alphabet</label>
-						<input type="text" placeholder="Full name in native alphabet" name="nname" 
-						value="<?php echo isset($cust['Full_Name_In_Native_Alphabet']) ? $cust['Full_Name_In_Native_Alphabet'] : '' ?>"/>
+						<input type="text" placeholder="Full name in native alphabet" name="nname" value="<?php echo isset($cust['Full_Name_In_Native_Language']) ? $cust['Full_Name_In_Native_Language'] : '' ?>"/>
 					</li>
 					
 				</ul>
