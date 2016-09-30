@@ -52,6 +52,11 @@
 				<?php include_once("fragments/ds160/step5.php"); ?>
 				<?php include_once("fragments/ds160/step6.php"); ?>
 				<?php include_once("fragments/ds160/step7.php"); ?>
+				<?php include_once("fragments/ds160/step8.php"); ?>
+				<?php include_once("fragments/ds160/step9.php"); ?>
+				<?php include_once("fragments/ds160/step10.php"); ?>
+				<?php include_once("fragments/ds160/step11.php"); ?>
+
 			</div>
 		</div>
 		<div class="actions-panel">

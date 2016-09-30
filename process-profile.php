@@ -40,7 +40,7 @@
 			'{$_SESSION['id']}'
 			)";
 	if (mysqli_query($dbCon, $sql)) {
-			echo "Record updated successfully";
+			echo "Success!!";
 		} else {
 			echo mysqli_error($dbCon);
 		}

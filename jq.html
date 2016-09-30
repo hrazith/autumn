@@ -1,0 +1,40 @@
+<!-- <script type="text/javascript">
+
+	function Person(entrname) {
+    	this.name = entrname;
+	}
+	Person.prototype.sayHello = function () {
+    	alert(this.name + " says hello");
+	};
+
+	var james = new Person("James");
+	james.sayHello();
+
+</script> -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName;
+};
+
+var myFather = new Person("John", "Doe", 50, "blue", "English");
+var mySister = new Person("Joan", "Doe", 50, "blue", "Japan");
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.name() ;
+
+</script>
+
+</body>
+</html>

@@ -10,7 +10,7 @@
 
 .inputbox {
 	background: #fff;
-	height: 400px;
+	min-height: 400px; 
 	margin: 30px auto;
 	border: 1px solid #c4c4c4;
 	position: relative;

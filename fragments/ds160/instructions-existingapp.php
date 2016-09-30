@@ -24,7 +24,7 @@
 	}
 	mysqli_close($dbCon);
 	echo $percentComplete;
-	echo "what the".$cust['State_Province'];
+	echo $cust['Mailing_Home_Address'].$cust['State_Province'];
 
 
 

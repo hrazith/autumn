@@ -6,7 +6,7 @@ $(function() {
 
 	$(document).click(function() {
 		console.log(i);
-		if (i == 6) {
+		if ((i == 6) || (i == 10)) {
 			$("#next").toggleClass('hide');
 			$("#sav").toggleClass('hide');
 
@@ -65,8 +65,9 @@ $(function() {
 	});
 
 	function processds() {
-		queryString = $('form').serialize();
-		//data: $(this).serialize() + '&NonFormValue=' + NonFormValue,
+		//queryString = $('form').serialize();
+		queryString = $('form').serialize() + '&index=' + i;
+
 
 		if (i <= 6) {
 			queryString += '&index=' + i;
@@ -77,6 +78,11 @@ $(function() {
 
 		if (i >= 7) {
 			$.post('processds1.php', queryString, function(data) {
+				$('#status').html(data);
+			});
+		}
+		if (i >= 10) {
+			$.post('processds2.php', queryString, function(data) {
 				$('#status').html(data);
 			});
 		}
