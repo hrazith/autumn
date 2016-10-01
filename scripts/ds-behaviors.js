@@ -4,15 +4,6 @@ $(function() {
 	var queryString = "";
 
 
-	$(document).click(function() {
-		console.log(i);
-		if ((i == 6) || (i == 10)) {
-			$("#next").toggleClass('hide');
-			$("#sav").toggleClass('hide');
-
-		}
-	});
-
 
 	$("#start").click(function(event) {
 		$(".intro, #step1 ").toggleClass('hide');
