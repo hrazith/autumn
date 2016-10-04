@@ -1,6 +1,11 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `procDS160CustUSContactWorkLocalContatPrepareInfoUpdate`(IN `AppNumberId` INT, IN `ContactPersonNameInUS` VARCHAR(200), IN `OrganizationNameInUS` VARCHAR(200), IN `Relationship` VARCHAR(200), IN `ContactAddressUS` VARCHAR(500), IN `Phone_Number` VARCHAR(50), IN `Email_Address` VARCHAR(50), IN `Primary_Occupation` VARCHAR(200), IN `PresentEmployer_SchoolName` VARCHAR(200), IN `Address` VARCHAR(500), IN `City` VARCHAR(200), IN `State_Province` VARCHAR(200), IN `PostalZone_ZipCode` INT, IN `Country` VARCHAR(200), IN `MonthSalary_LocalCurrency` VARCHAR(100), IN `BrifelyDescribeYourDuties` VARCHAR(500), IN `CurrentLocation` VARCHAR(500), IN `AnyoneAssistInFillingApplication` VARCHAR(50))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `procDS160CustUSContactWorkLocalContatPrepareInfoUpdate`(IN `AppNumber` VARCHAR(200), IN `ContactPersonNameInUS` VARCHAR(200), IN `OrganizationNameInUS` VARCHAR(200), IN `Relationship` VARCHAR(200), IN `ContactAddressUS` VARCHAR(500), IN `Phone_Number` VARCHAR(50), IN `Email_Address` VARCHAR(50), IN `Primary_Occupation` VARCHAR(200), IN `PresentEmployer_SchoolName` VARCHAR(200), IN `Address` VARCHAR(500), IN `City` VARCHAR(200), IN `State_Province` VARCHAR(200), IN `PostalZone_ZipCode` VARCHAR(50), IN `Country` VARCHAR(200), IN `MonthSalary_LocalCurrency` VARCHAR(100), IN `BrifelyDescribeYourDuties` VARCHAR(500), IN `CurrentLocation` VARCHAR(500), IN `AnyoneAssistInFillingApplication` VARCHAR(50))
 BEGIN
+
+DECLARE AppNumberId INT;
+
+SET AppNumberId = (SELECT CustAppInfoId FROM custappinfo 
+                   WHERE CustAppNumber = AppNumber LIMIT 1);
  
  UPDATE custuscontactinfo
  SET ContactPersonNameInUS = ContactPersonNameInUS,
