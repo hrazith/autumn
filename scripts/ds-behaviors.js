@@ -21,10 +21,6 @@ $(function() {
 				calcpercent();
 			}
 
-			/*if (i > numItems) {
-				processds();
-				location.href = 'ds1.php';
-			}*/
 		}
 
 		if (i > 1) {

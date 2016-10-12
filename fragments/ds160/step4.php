@@ -1,4 +1,4 @@
-<div class="inputbox form-intake shadow hide" id="step4">	
+<div class="inputbox qStep shadow hide" id="step4">	
 	<form>
 		<div class="grid">
 			<div class="col-3-4">
@@ -21,9 +21,7 @@
 		</div>
 	</form>
 </div>
-<script type="text/javascript">
-	$("#country-select").val('<?php echo $cust["Nationality"];?>');
-</script>
+
 
 
 

@@ -61,6 +61,7 @@
 			</div>
 		</div>
 
+		</div> -->
 		<div class="qFooter">
 			<div class="progress">
   				<div class="bar"></div>
@@ -69,21 +70,19 @@
 				<span class="naked">Menu</span>
 			</div>
 			
-			<nav class="qStepper hide">
+			<nav class="qStepper">
 				<ul>
-					<li class="prev primary disabled"><a href="#">Prev</a></li>
-					<li class="next primary"><a href="#">Next</a></li>
+					<li class="prev primary disabled" id="back"><a href="#">Prev</a></li>
+					<li class="next primary" id="next"><a href="#">Next</a></li>
 				</ul>
 			</nav>
-	
+			<!-- <div class="formnav">
+				<input type="submit" name="submit" class="primary rounded disabled" value="Back" id="back"/>	
+				<input type="submit" name="submit" class="primary rounded disabled" value="Next" id="next"/>
+			</div>	 -->	
 		</div>
-	</div> 
-	<script type="text/javascript">
-		$("#country-select").val('<?php echo $cust["Nationality"];?>');
-		$("#countr").val('<?php echo isset($cust['Country']) ? $cust['Country'] : 'Choose...';?>');
-		$("#mcountry").val('<?php echo isset($cust['Mailing_Country']) ? $cust['Mailing_Country'] : 'Choose...';?>');
-	</script>
+	</div>
 
-	<script src="scripts/qbuild.js"></script>
+	<script src="scripts/ds-behaviors.js"></script>
 	</body>
 </html>

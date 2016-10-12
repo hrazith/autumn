@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
 	function ProductBuilder(element) {
 		this.element = element;
+		console.log(element);
 		this.stepsWrapper = this.element.children('.cd-builder-steps');
 		this.steps = this.element.find('.builder-step');
 		//store some specific bulider steps
@@ -27,6 +28,7 @@ jQuery(document).ready(function($) {
 		//detect click on the left navigation
 		this.mainNavigation.on('click', 'li:not(.active)', function(event) {
 			event.preventDefault();
+			alert($(this).index());
 			self.loaded && self.newContentSelected($(this).index());
 		});
 

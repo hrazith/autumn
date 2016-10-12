@@ -1,0 +1,89 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../../fonts/icomoon.eot?-jztd4f');
+	src:url('../../fonts/icomoon.eot?#iefix-jztd4f') format('embedded-opentype'),
+		url('../../fonts/icomoon.woff?-jztd4f') format('woff'),
+		url('../../fonts/icomoon.ttf?-jztd4f') format('truetype'),
+		url('../../fonts/icomoon.svg?-jztd4f#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+	content: "\e60d";
+}
+
+.icon-repeat:before {
+	content: "\e60e";
+}
+
+.icon-trash:before {
+	content: "\e60f";
+}
+
+.icon-arrow-up:before {
+	content: "\e60b";
+}
+
+.icon-arrow-down:before {
+	content: "\e60c";
+}
+
+.icon-contracts:before {
+	content: "\e60a";
+}
+
+.icon-contact:before {
+	content: "\e600";
+}
+
+.icon-invoices:before {
+	content: "\e601";
+}
+
+.icon-letter:before {
+	content: "\e602";
+}
+
+.icon-marquee:before {
+	content: "\e603";
+}
+
+.icon-nominations:before {
+	content: "\e604";
+}
+
+.icon-search:before {
+	content: "\e605";
+}
+
+.icon-settings:before {
+	content: "\e606";
+}
+
+.icon-statements:before {
+	content: "\e607";
+}
+
+.icon-tickets:before {
+	content: "\e608";
+}
+
+.icon-volume:before {
+	content: "\e609";
+}
+

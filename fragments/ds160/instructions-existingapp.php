@@ -6,7 +6,7 @@
 
 	?>  
 </p>
-<input type="submit" name="submit" class="primary rounded" value="Start" id="start"/>
+<input type="submit" name="submit" class="primary rounded init" value="Start" id="start"/>
 <br/>
 
 <?php

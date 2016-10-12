@@ -1,5 +1,5 @@
 
-<div class="inputbox form-intake shadow hide" id="step7">	
+<div class="inputbox qStep shadow hide" id="step7">	
 	<form>
 		<div class="grid">
 			<div class="col-3-4">
@@ -32,8 +32,6 @@
 		</div>
 	</form>
 </div>
-<script type="text/javascript">
-	$("#countr").val('<?php echo isset($cust['Country']) ? $cust['Country'] : 'Choose...';?>');
-</script>
+
 
 		

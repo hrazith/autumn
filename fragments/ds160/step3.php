@@ -1,5 +1,5 @@
 
-<div class="inputbox form-intake shadow hide" id="step3">	
+<div class="inputbox qStep shadow hide" id="step3">	
 	<form>
 		<div class="grid">
 			<div class="col-3-4">
