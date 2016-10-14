@@ -49,6 +49,12 @@
 	$tbl2 	= "custpersonalinfo2";
 	$tbl3 	= "custpersonalinfo3";
 	$tbl4	= "custtravelinfo1";
+	$tbl5 	= "custtravelinfo2";
+	$tbl6 	= "CustUSContactWorkLocalContactPrepareInfo";
+	$tbl7 	= "custfamilyinfo1";
+	$tbl8 	= "custfamilyinfo2";
+
+
 	$data1	= "(
 				'{$_SESSION['appId']}', 
 				'{$_REQUEST['fname']}',
@@ -122,11 +128,50 @@
 				'{$_REQUEST['ppcountry']}',
 				'{$_REQUEST['otherstraveling']}'
 				)";
+	$data5	= "(
+				'{$_SESSION['appId']}', 
+				'{$_REQUEST['travelgroup']}',
+				'{$_REQUEST['travelperson1']}',
+				'{$_REQUEST['travelperson2']}',
+				'{$_REQUEST['travelperson3']}',
+				'{$_REQUEST['travelperson4']}',
+				'{$_REQUEST['travelperson5']}',
+				'{$_REQUEST['tprelation1']}',
+				'{$_REQUEST['tprelation2']}',
+				'{$_REQUEST['tprelation3']}',
+				'{$_REQUEST['tprelation4']}',
+				'{$_REQUEST['tprelation5']}',
+				'{$_REQUEST['everbeentous']}',
+				'{$_REQUEST['everissuedusvisa']}',
+				'{$_REQUEST['everrefusedusvisa']}'
+				)";
+	$data6	= "(
+				'{$_SESSION['appId']}', 
+				'{$_REQUEST['uscontactpersonname']}',
+				'{$_REQUEST['uscontactorgname']}',
+				'{$_REQUEST['uscontactrelation']}',
+				'{$_REQUEST['uscontactaddress']}',
+				'{$_REQUEST['uscontactemail']}',
+				'{$_REQUEST['uscontactphone']}',
+				'{$_REQUEST['primaryoccupation']}',
+				'{$_REQUEST['presentemployer']}',
+				'{$_REQUEST['empaddress']}',
+				'{$_REQUEST['empcity']}',
+				'{$_REQUEST['empstate']}',
+				'{$_REQUEST['empzip']}',
+				'{$_REQUEST['empcountry']}',
+				'{$_REQUEST['salary']}',
+				'{$_REQUEST['empdescription']}',
+				'{$_REQUEST['custcurrentlocation']}',
+				'{$_REQUEST['assistance']}'
+				)";
 
 	InsertOrUpdate($tbl1,$dbCon,$data1);
 	InsertOrUpdate($tbl2,$dbCon,$data2);
 	InsertOrUpdate($tbl3,$dbCon,$data3);
 	InsertOrUpdate($tbl4,$dbCon,$data4);
+	InsertOrUpdate($tbl5,$dbCon,$data5);
+	InsertOrUpdate($tbl6,$dbCon,$data6);
 
 
 
