@@ -50,10 +50,12 @@
 	$tbl3 	= "custpersonalinfo3";
 	$tbl4	= "custtravelinfo1";
 	$tbl5 	= "custtravelinfo2";
-	$tbl6 	= "CustUSContactWorkLocalContactPrepareInfo";
-	$tbl7 	= "custfamilyinfo1";
-	$tbl8 	= "custfamilyinfo2";
-
+	$tbl6 	= "CustUSContactInfo";
+	$tbl7 	= "CustWorkEducationTrainingInfo";
+	$tbl8 	= "CustLocalInfo";
+	$tbl9 	= "CustPreparerappInfo";
+	$tbl10 	= "custfamilyinfo1";
+	$tbl11 	= "custfamilyinfo2";
 
 	$data1	= "(
 				'{$_SESSION['appId']}', 
@@ -151,8 +153,11 @@
 				'{$_REQUEST['uscontactorgname']}',
 				'{$_REQUEST['uscontactrelation']}',
 				'{$_REQUEST['uscontactaddress']}',
-				'{$_REQUEST['uscontactemail']}',
 				'{$_REQUEST['uscontactphone']}',
+				'{$_REQUEST['uscontactemail']}'
+				)";
+	$data7	= "(
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['primaryoccupation']}',
 				'{$_REQUEST['presentemployer']}',
 				'{$_REQUEST['empaddress']}',
@@ -161,9 +166,47 @@
 				'{$_REQUEST['empzip']}',
 				'{$_REQUEST['empcountry']}',
 				'{$_REQUEST['salary']}',
-				'{$_REQUEST['empdescription']}',
-				'{$_REQUEST['custcurrentlocation']}',
+				'{$_REQUEST['empdescription']}'
+				)";
+	$data8	= "(
+				'{$_SESSION['appId']}', 
+				'{$_REQUEST['custcurrentlocation']}'
+				)";
+	$data9	= "(
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['assistance']}'
+				)";
+	$data10	= "(
+				'{$_SESSION['appId']}', 
+				'{$_REQUEST['flname']}',
+				'{$_REQUEST['ffname']}',
+				'{$_REQUEST['fdob']}',
+				'{$_REQUEST['finus']}',
+				'{$_REQUEST['mlname']}',
+				'{$_REQUEST['mfname']}',
+				'{$_REQUEST['minus']}',
+				'{$_REQUEST['immrelinus']}',
+				'{$_REQUEST['rel1']}',
+				'{$_REQUEST['rel1relation']}',
+				'{$_REQUEST['rel1status']}',
+				'{$_REQUEST['rel2']}',
+				'{$_REQUEST['rel2relation']}',
+				'{$_REQUEST['rel2status']}',
+				'{$_REQUEST['rel3']}',
+				'{$_REQUEST['rel3relation']}',
+				'{$_REQUEST['rel3status']}'
+				)";
+	$data11	= "(
+				'{$_SESSION['appId']}', 
+				'{$_REQUEST['rel4']}',
+				'{$_REQUEST['rel4relation']}',
+				'{$_REQUEST['rel4status']}',
+				'{$_REQUEST['sfullname']}',
+				'{$_REQUEST['sdob']}',
+				'{$_REQUEST['snationality']}',
+				'{$_REQUEST['scityob']}',
+				'{$_REQUEST['scountryob']}',
+				'{$_REQUEST['saddress']}'
 				)";
 
 	InsertOrUpdate($tbl1,$dbCon,$data1);
@@ -172,7 +215,11 @@
 	InsertOrUpdate($tbl4,$dbCon,$data4);
 	InsertOrUpdate($tbl5,$dbCon,$data5);
 	InsertOrUpdate($tbl6,$dbCon,$data6);
-
+	InsertOrUpdate($tbl7,$dbCon,$data7);
+	InsertOrUpdate($tbl8,$dbCon,$data8);
+	InsertOrUpdate($tbl9,$dbCon,$data9);
+	InsertOrUpdate($tbl10,$dbCon,$data10);
+	InsertOrUpdate($tbl11,$dbCon,$data11);
 
 
 	

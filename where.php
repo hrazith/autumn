@@ -84,7 +84,7 @@
 			    	The country you want to visit is <?php echo htmlspecialchars($_POST["country"]); ?>.<br>
 			    	Your Application number is <?php echo $appnumber; ?>.<br>
 			    	<?php if ($app_exists):?> 
-			    		<p> Tou have already started an application!</p>
+			    		<p> You have already started an application!</p>
 			    		<?php $_SESSION['appId']=$app_exists[0]; ?>
 			    		<?php echo "Last updated: ".$app_exists[9]; ?>
 			    		<script type="text/javascript">
