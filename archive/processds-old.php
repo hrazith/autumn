@@ -6,14 +6,13 @@
 // and make sesssion variable for appId.
 // Use the appId then to write into all the ds160 tables
 
-	if ($_SESSION['newapp']){
+ 	if ($_SESSION['newapp']){
 
 		$sql = "CALL procCustAppInfoInsert(
 			'{$_SESSION['id']}',
 			'{$_SESSION['countryid']}',
 			'{$_SESSION['visaid']}',
-			'{$_SESSION['appnumber']}',
-			'1'
+			'{$_SESSION['appnumber']}'
 			)";
 
 		if (mysqli_query($dbCon, $sql)) {
@@ -28,14 +27,15 @@
 		}
 	}
 
-
 // Check if application already exists. If it does then update InfoTable
 // else Insert a new row in InfoTable
 
 	
 	function InsertOrUpdate($tbl,$db,$data) {
+
+		$app_exists = mysqli_fetch_row(mysqli_query($db,"SELECT * FROM $tbl WHERE CustAppInfoId='{$_SESSION['appId']}'"));
 		
-		($_SESSION['newapp']) ? $direction = "Insert" : $direction = "Update";
+		($app_exists) ? $direction = "Update" : $direction = "Insert";
 		$sql = "CALL procDS160".$tbl.$direction.$data;
 
 		if (mysqli_query($db, $sql)) {
@@ -58,7 +58,7 @@
 	$tbl11 	= "custfamilyinfo2";
 
 	$data1	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['fname']}',
 				'{$_REQUEST['lname']}',
 				'{$_REQUEST['nname']}',
@@ -80,7 +80,7 @@
 				'{$_REQUEST['city']}'
 				)";
 	$data2	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['state']}',
 				'{$_REQUEST['zip']}',
 				'{$_REQUEST['country']}',
@@ -101,7 +101,7 @@
 				'{$_REQUEST['pptcity']}'
 				)";
 	$data3	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['pptstate']}',
 				'{$_REQUEST['pptcountry']}',
 				'{$_REQUEST['pptissdate']}',
@@ -109,7 +109,7 @@
 				'{$_REQUEST['pptstolen']}'
 				)";
 	$data4	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['principal']}',
 				'{$_REQUEST['purposeofvisit1']}',
 				'{$_REQUEST['purposeofvisit2']}',
@@ -131,7 +131,7 @@
 				'{$_REQUEST['otherstraveling']}'
 				)";
 	$data5	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['travelgroup']}',
 				'{$_REQUEST['travelperson1']}',
 				'{$_REQUEST['travelperson2']}',
@@ -148,7 +148,7 @@
 				'{$_REQUEST['everrefusedusvisa']}'
 				)";
 	$data6	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['uscontactpersonname']}',
 				'{$_REQUEST['uscontactorgname']}',
 				'{$_REQUEST['uscontactrelation']}',
@@ -157,7 +157,7 @@
 				'{$_REQUEST['uscontactemail']}'
 				)";
 	$data7	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['primaryoccupation']}',
 				'{$_REQUEST['presentemployer']}',
 				'{$_REQUEST['empaddress']}',
@@ -169,15 +169,15 @@
 				'{$_REQUEST['empdescription']}'
 				)";
 	$data8	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['custcurrentlocation']}'
 				)";
 	$data9	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['assistance']}'
 				)";
 	$data10	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['flname']}',
 				'{$_REQUEST['ffname']}',
 				'{$_REQUEST['fdob']}',
@@ -197,7 +197,7 @@
 				'{$_REQUEST['rel3status']}'
 				)";
 	$data11	= "(
-				'{$_SESSION['appnumber']}', 
+				'{$_SESSION['appId']}', 
 				'{$_REQUEST['rel4']}',
 				'{$_REQUEST['rel4relation']}',
 				'{$_REQUEST['rel4status']}',

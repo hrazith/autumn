@@ -67,6 +67,8 @@
 				</div>
 			</div>
 
+			<?php include_once("fragments/silos.php"); ?>
+
 			
 		</div>
 		

@@ -24,7 +24,7 @@
 	    	$_SESSION['email'] = $email;
 	    	$_SESSION['id'] = $userId;
 	    	$_SESSION['username'] = $username;
-	    	header('Location: home.php');
+	    	header('Location: profile.php');
 	    } else { 
 			/*$err= "Incorrect email or password";*/
 			$err = '<i class="icon-arrow-up"></i>'.'Incorrect email or password';

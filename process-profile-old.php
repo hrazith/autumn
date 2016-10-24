@@ -41,26 +41,28 @@
     $sql = "CALL procGetProfileInfoWithAppPercentageCompleted(
 			'{$_SESSION['username']}'
 			)";
-	
-
-
-	$result = mysqli_query($dbCon, $sql);
-	while($row = mysqli_fetch_assoc($result)) {
-			$percentComplete=$row["AppPercentageCompleted"];
-			$formType=$row["FormType"];
-			$visaType=$row["VisaTypeName"];
+	if (mysqli_query($dbCon, $sql)) {
+			echo "Success!!";
+			
+		} else {
+			echo mysqli_error($dbCon);
+			echo $_SESSION['id'];
 		}
 
-	echo $percentComplete;
-	echo $formType;
+
+	/*$result = mysqli_query($dbCon, $sql);
+	while($row = mysqli_fetch_assoc($result)) {
+			$percentComplete=$row["AppPercentageCompleted"];;
+		}
+
+	echo $percentComplete;*/
 		
 ?>
 
 
 
 		<div class="application">
-			<h2> <?php echo $visaType; ?></h2>
-			<h3> <?php echo $formType; ?></h3>
+			<h3> App Name </h3>
 			<div class="progress">
   				<div class="bar"></div>
 			</div>
