@@ -12,14 +12,14 @@
 		$dob = strip_tags($_POST['month']).strip_tags($_POST['day']).strip_tags($_POST['year']);
 
 
-	    $sql = "SELECT * FROM CustProfileInfo WHERE UserName = '$username'";
+	    $sql = "SELECT * FROM custprofileinfo WHERE UserName = '$username'";
 		$query = mysqli_query($dbCon, $sql);
 		if (mysqli_num_rows($query) == 1) {
 	    	echo "<h1>Error</h1>";
         	echo "<p>Sorry, that username is taken. Please go back and try again.</p>";
 	    } else {
 
-	    	$newrecord = "INSERT INTO CustProfileInfo (UserName, FirstName, LastName, EmailAddress, Password, DateOfBirth, Activated )
+	    	$newrecord = "INSERT INTO custprofileinfo (UserName, FirstName, LastName, EmailAddress, Password, DateOfBirth, Activated )
             VALUES ('$username', '$_POST[firstname]', '$_POST[lastname]', '$_POST[email]', '$_POST[password]', '$dob', '1' )";
             $register = mysqli_query($dbCon, $newrecord);
 

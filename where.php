@@ -10,7 +10,7 @@
 		die();
 	}
     include_once("connect.php");
-	$sql = "SELECT CountryName, CountryCode FROM CountryList";
+	$sql = "SELECT CountryName, CountryCode FROM countrylist";
 	$result = $dbCon->query($sql);	
 ?>
 <!DOCTYPE html>

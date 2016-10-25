@@ -8,7 +8,7 @@
 		$password = strip_tags($_POST['password']);
 
 
-	    $sql = "SELECT CustProfileInfoId, UserName, EmailAddress, Password FROM CustProfileInfo WHERE EmailAddress = '$email' AND Activated = '1' LIMIT 1";
+	    $sql = "SELECT CustProfileInfoId, UserName, EmailAddress, Password FROM custprofileinfo WHERE EmailAddress = '$email' AND Activated = '1' LIMIT 1";
 
 	    $query = mysqli_query($dbCon, $sql);
 

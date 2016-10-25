@@ -50,10 +50,10 @@
 	$tbl3 	= "custpersonalinfo3";
 	$tbl4	= "custtravelinfo1";
 	$tbl5 	= "custtravelinfo2";
-	$tbl6 	= "CustUSContactInfo";
-	$tbl7 	= "CustWorkEducationTrainingInfo";
-	$tbl8 	= "CustLocalInfo";
-	$tbl9 	= "CustPreparerappInfo";
+	$tbl6 	= "custuscontactinfo";
+	$tbl7 	= "custworkeducationtraininginfo";
+	$tbl8 	= "custlocalinfo";
+	$tbl9 	= "custpreparerappinfo";
 	$tbl10 	= "custfamilyinfo1";
 	$tbl11 	= "custfamilyinfo2";
 
