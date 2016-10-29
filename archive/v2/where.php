@@ -67,9 +67,9 @@
 			<?php if (!empty($_POST)): ?>
 				<?php 
 					$country = $_POST["country"];
-					$countryId = mysqli_fetch_row(mysqli_query($dbCon, "SELECT CountryListId FROM CountryList WHERE CountryName='$country'"));
-					$visatype = mysqli_fetch_row(mysqli_query($dbCon, "SELECT CountryVisaType FROM CountryVisaTypeList WHERE CountryVisaTypeDescription LIKE '%tourism%'"));
-					$visaid = mysqli_fetch_row(mysqli_query($dbCon, "SELECT CountryVisaTypeListId FROM CountryVisaTypeList WHERE CountryVisaType='$visatype[0]'")); 
+					$countryId = mysqli_fetch_row(mysqli_query($dbCon, "SELECT CountryListId FROM countrylist WHERE CountryName='$country'"));
+					$visatype = mysqli_fetch_row(mysqli_query($dbCon, "SELECT CountryVisaType FROM countryvisatypelist WHERE CountryVisaTypeDescription LIKE '%tourism%'"));
+					$visaid = mysqli_fetch_row(mysqli_query($dbCon, "SELECT CountryVisaTypeListId FROM countryvisatypelist WHERE CountryVisaType='$visatype[0]'")); 
 					$appnumber = "APP"."00".$userId.$countryId[0].$visatype[0];
 
 					// Set session variables to create an application
@@ -78,7 +78,7 @@
 					$_SESSION['visatype']=$visatype[0];
 					$_SESSION['visaid']=$visaid[0];
 
-					$app_exists = mysqli_fetch_row(mysqli_query($dbCon,"SELECT * FROM CustAppInfo WHERE CustAppNumber='$appnumber' AND Activated='1'"));
+					$app_exists = mysqli_fetch_row(mysqli_query($dbCon,"SELECT * FROM custappinfo WHERE CustAppNumber='$appnumber' AND Activated='1'"));
 				?>
 			    <p> Welcome!<br>
 			    	The country you want to visit is <?php echo htmlspecialchars($_POST["country"]); ?>.<br>
