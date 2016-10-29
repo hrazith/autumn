@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* Form Elements */
+
+/***************************************************************************** 
+Stuff about buttons here
+******************************************************************************/
+
+.primary {
+	background: #D45449;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 8px 36px;
+	color: #fff;
+}
+
+.primary:hover {
+	cursor: pointer;
+	background: #FDBD62;
+
+}
+	
+
+
+/* Disabled button states */
+
+.disabled {
+	background: #c4c4c4 !important;
+}
+
+.disabled:hover {
+	cursor: default;
+}
+
+/* Inputs */
+label {
+  display: block;
+}
+
+input[type="text"], input[type="password"] {
+  display: block;
+  margin: 0;
+  width: 90%;
+  font-size: 18px;
+  padding:12px 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+  border: 1px solid #c4c4c4;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+	color: #c4c4c4;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 200;
+   font-size: 14px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #c4c4c4;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 200;
+   font-size: 14px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #c4c4c4;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 200;
+   font-size: 14px;
+}
+
+:-ms-input-placeholder {  
+  	color: #c4c4c4;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 200;
+   font-size: 14px; 
+}
+
+input.naked {
+  background: none;
+  color: #fff;
+}
+
+input.naked:hover {
+  cursor: pointer;
+  color: #FDBD62;
+}
+
+
+/* Dropdowns, Select */
+
+
+
+.select {
+  border: 1px solid #c4c4c4;
+  position: relative;
+  background: #fff;
+  display: inline-block;
+}
+
+.select select {
+    padding:12px 12px;
+    font-size: 16px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+}
+
+.select:before {
+    bottom: 1px;
+    color: #757575;
+    content: "▼";
+    line-height: 1;
+    padding-top: 0.7em;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transform: scale(0.84, 0.42);
+    width: 2em;
+}
+
+
+/** Progress Bar */
+.progress {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  background-color: #ddd;
+}
+
+.bar {
+  position: absolute; 
+  width: 1%;
+  height: 100%;
+  background-color: #4CAF50;
+}
+
+
+

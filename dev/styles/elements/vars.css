@@ -1,0 +1,12 @@
+:root {
+	/* Dark blue*/
+	--brand-primary: #243248;
+
+	--brand-secondary: #FDBD62;
+	
+	--brand-accent: #F6e8c5;
+	/* Red */
+	--brand-alert: #D45449;
+
+	--test:#fff;
+}
