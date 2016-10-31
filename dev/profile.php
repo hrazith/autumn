@@ -30,7 +30,7 @@
 						</div>
 						<div class="stat-overlay">
 							<h3>52</h3>
-							<p class="visaschk">visa-free countries. As a US resident you may qualifiy for more, answer a <a href="#">few simple questions</a> </p>
+							<p class="visaschk">visa-free countries.</p>
 						</div>
 						
 						
@@ -54,13 +54,7 @@
 						<p>&nbsp;</p>
 						
 
-						<h2>Immigration History: Timeline</h2>
-						<p>&nbsp;</p>
-						<h2>Log an event</h2>
-						<div class="stat-overlay">
-							<h3>+</h3>
-							<a href="#">see examples</a>
-						</div>
+						
 						
 
 					</div>

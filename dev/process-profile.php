@@ -50,10 +50,7 @@
 			$formType=$row["FormType"];
 			$visaType=$row["VisaTypeName"];
 		}
-
-	echo $percentComplete;
-	echo $formType;
-		
+			
 ?>
 
 

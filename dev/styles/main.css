@@ -148,7 +148,6 @@ h2 {
 
 .discovery, .dashboard{
 	position: relative;
-	height: 480px;
 	background: var(--brand-secondary);
 	color:#424242;
 	padding: 14px;
