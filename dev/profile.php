@@ -21,6 +21,15 @@
 	<body>
 		<?php include_once("fragments/header.php"); ?>
 		<div class="content">
+			<div class="subnav">
+				<ul class="subnav-list">
+					<li class="active"><a href="profile.php">Dashboard</a></li>
+					<li><a href="#">Extended profile</a></li>
+					<li><a href="#">Notifications</a></li>
+					<li><a href="#">Travel History</a></li>
+					<li><a href="#">Timeline</a></li>
+				</ul>
+			</div>
 			<div class="dashboard rounded">
 				<div class="grid">
 					<div class="col-1-3">
@@ -36,7 +45,7 @@
 						
 					</div>
 					<div class="col-1-3">
-						<p>You have 2 applications in progress and 1 complete.</p>
+						<p>Workflows in progress</p>
 						<?php include_once("process-profile.php"); ?>
 					</div>
 					<div class="col-1-3">

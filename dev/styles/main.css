@@ -99,7 +99,7 @@ h2.title {
 }
 
 body>.content {
-	margin-top: 50px;
+	margin-top: 40px;
 	color: #424242;
 }
 
@@ -143,6 +143,21 @@ h2 {
 
 .silo:hover h2, .silo:hover i { color:#424242;}
 
+/* Subnav */
+
+.subnav {
+	margin-bottom: 20px;
+}
+
+.subnav li a {
+	color: #424242;
+	font-weight: 600;
+	opacity: 0.5;
+}
+
+.subnav li a:hover, .subnav li.active a {
+	opacity: 1;
+}
 
 /* Discovery */
 
